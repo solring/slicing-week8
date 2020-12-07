@@ -1,0 +1,211 @@
+// ------ logo -----
+$variations: (
+    "",
+    "white",
+);
+
+@each $v in $variations {
+    .logo-#{$v}{
+        a {
+            display: block;
+            @include hideText;
+
+            background: url($img-src-prefix + "d’Perfume#{$v}.png");
+            width: $logo-width;
+            height: $logo-height;
+        }
+
+        margin: 0;
+    }
+}
+
+// ----- menu -----
+.menu-collapse {
+    position: absolute;
+    top: $header-height;
+    right: 0;
+    width: 100vw;
+    z-index: 2000; // place it on the top
+}
+
+.menu {
+    flex-direction: column;
+    background: #707070;
+
+    width: 100%;
+    text-align: center;
+    a {
+        border: 1px solid white;
+        color: white;
+        font-size: 20px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+// ----- banner ------
+.banner {
+    background: center / cover no-repeat url($img-src-prefix + "index1.jpg");
+    height: calc(100vh - #{$header-height});
+
+    color: white;
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        height: 480px;
+    }
+}
+
+.banner-subscribe {
+    background: center / cover no-repeat url($img-src-prefix + "index10.jpg");
+    height: 600px;
+    padding-top: 312px;
+}
+
+// ----- picture containers -----
+.pic-sqrt-container{
+    @include fixed-ratio(1, 1);
+    overflow: hidden;
+    img {
+        position: absolute;
+        left:0;
+        top:0;
+        @include img-cover;
+    }
+}
+
+.pic-product-container {
+    @include fixed-ratio(35, 54);
+    overflow: hidden;
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include img-cover;
+    }
+
+    @include media-breakpoint-down(md) {
+        @include fixed-ratio(1, 1);
+    }
+}
+
+$pic-sizes: (
+    220,
+    460,
+    520,
+);
+
+@each $h in $pic-sizes {
+    .pic-height-md-#{$h} {
+        width: 100%;
+        height: #{$h}px;
+        object-fit: cover;
+    }
+
+    @include media-breakpoint-down(md) {
+        .pic-height-#{$h} {
+            width: 100%;
+            height: #{$h}px;
+            object-fit: cover;
+        }
+    }
+}
+
+.pic-cover {
+    @include img-cover;
+}
+
+.pic-soldout {
+    @include withOverlay(0.3);
+    
+    .label{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        
+        color: white;
+        font-size: 24px;
+
+        z-index: 100;
+    }
+}
+
+// ----- container -----
+$sections: (
+    "-sm": 40px,
+    "": 60px,
+    "-lg": 80px,
+);
+
+$sections-sm: (
+    "-sm": 32px,
+    "": 40px,
+    "-lg": 30px,
+);
+
+@each $name, $val in $sections {
+    .section#{$name} {
+        padding-top: $val;
+        padding-bottom: $val;
+    }
+}
+
+@each $name, $val in $sections-sm {
+    @include media-breakpoint-down(md) {
+        .section#{$name} {
+            padding-top: $val;
+            padding-bottom: $val;
+        }
+    }
+}
+
+.center-sqrt-container {
+    @include fixed-ratio(1, 1);
+}
+
+// ----- customized lists -----
+
+.list-mb {
+    @include list-gap(58px);
+    @include media-breakpoint-down(md) {
+        @include list-gap(30px);
+    }
+}
+
+.list-mb-sm {
+    @include list-gap(30px);
+    @include media-breakpoint-down(md) {
+        @include list-gap(16px);
+    }
+}
+
+.list-mb-xs {
+    @include list-gap(16px);
+}
+
+.account-nav {
+    .nav-item.active .nav-link{
+        border-bottom: 2px solid $primary;
+    }
+    .nav-link {
+        color: $gray-text;
+        padding: 24px 0 0 0;
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// ----- customized buttons -----
+.btn.btn-round {
+    border-radius: 30px;
+}

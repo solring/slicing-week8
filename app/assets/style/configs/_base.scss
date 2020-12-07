@@ -1,0 +1,88 @@
+/* base */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+// use self-defined rfs
+@include media-breakpoint-down(md) {
+    h4 {
+        font-size: 20px;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// BS themes
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.page-item .page-link {
+    border: none;
+    &:hover {
+        background: none;
+    }
+}
+
+.page-item.active {
+    .page-link {
+        background: none;
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+.form-control[readonly] {
+    background: none;
+    border: none;
+    color: $gray-form;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.custom-select, .form-control {
+    color: $gray-form;
+    padding: 0.5rem 0.5rem;
+}
+
+.text-muted {
+    color: $gray-muted;
+}
+
+// other effects
+a img {
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: $gray-text;
+}
+
+.description {
+    position: absolute;
+    right: 0;
+}
