@@ -1,5 +1,14 @@
-@font-face {
-    font-family: custom-font;
-    src: local("SF Pro Text"), url("../fonts/SF-Pro.ttf");
-    unicode-range: U+000-5FF;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$title-font-family: 'Raleway', 'Helvetica', sans-serif;
+$content-font-family: 'Open Sans', 'Arial', sans-serif;
+
+// ----- font sizes -----
+.fz-title {
+    font: normal normal 800 48px/64px Raleway;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 32px;
+    }
 }

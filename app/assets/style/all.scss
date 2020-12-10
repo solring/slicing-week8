@@ -1,10 +1,20 @@
-@import 'variables';
-@import 'bootstrap/bootstrap';
-@import 'fonts';
-@import 'utils';
-@import 'mixins';
+@import 'configs/bootstrap/variables';
+@import 'venders/bootstrap/bootstrap';
 
-@import 'base';
-@import 'components';
-@import 'animation';
+@import 'utils/utils';
+@import 'utils/mixins';
+
+@import 'configs/fonts';
+@import 'configs/variables';
+@import 'configs/bootstrap/overrides';
+
+@import 'configs/base';
+
+@import 'components/components';
+@import 'components/images';
+@import 'components/container';
+@import 'components/searchbar';
+@import 'components/overlay';
+
+@import 'animation/animation';
 

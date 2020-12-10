@@ -1,0 +1,27 @@
+// ---- carousel
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+// ---- nav tags
+.nav-tags {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+    .nav-link {
+        color: $secondary;
+        border-bottom: 2px solid $info;
+        &.active, &:hover {
+            color: $primary;
+            border-bottom: 2px solid $primary;
+        }
+    }
+}
+
+// ---- btn
+.btn {
+    h1, h2, h3, h4, h5, h6, p{
+        margin: 0;
+    }
+}

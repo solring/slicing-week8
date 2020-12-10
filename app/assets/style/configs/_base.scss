@@ -9,18 +9,13 @@ img {
 }
 
 body {
-    font-family: $font-family-base;
+    font-family: $content-font-family;
+    overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-}
-
-// use self-defined rfs
-@include media-breakpoint-down(md) {
-    h4 {
-        font-size: 20px;
-    }
+    font-family: $title-font-family;
 }
 
 a {
@@ -30,59 +25,12 @@ a {
     }
 }
 
-// BS themes
-.navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
+ol, ul {
+    padding-left: 0;
+    margin: 0;
+	list-style: none;
 }
 
-.page-item .page-link {
-    border: none;
-    &:hover {
-        background: none;
-    }
-}
-
-.page-item.active {
-    .page-link {
-        background: none;
-        color: $primary;
-        text-decoration: underline;
-    }
-}
-
-.form-control[readonly] {
-    background: none;
-    border: none;
-    color: $gray-form;
-}
-
-.form-group {
-    margin-bottom: 1.25rem;
-}
-
-.custom-select, .form-control {
-    color: $gray-form;
-    padding: 0.5rem 0.5rem;
-}
-
-.text-muted {
-    color: $gray-muted;
-}
-
-// other effects
-a img {
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: $gray-text;
-}
-
-.description {
-    position: absolute;
-    right: 0;
+section, .section {
+    padding-top: 72px;
 }

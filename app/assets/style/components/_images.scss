@@ -1,0 +1,29 @@
+// ------ logo -----
+.logo {
+    a {
+        display: block;
+        @include hideText;
+
+        background: url("../images/ic-logo-aloha.svg");
+        width: $logo-width;
+        height: $logo-height;
+    }
+
+    margin: 0;
+}
+
+// ----- background image for cities ------
+$cities: (
+     "Osaka",
+     "Kyoto",
+     "Reykjavic",
+     "Paris",
+     "Roma",
+     "Bangkok",
+);
+
+@each $city in $cities {
+    .bg-img-#{$city} {
+        background: linear-gradient(270deg, #00000000 0%, #000000 100%), center / cover no-repeat url("../images/#{$city}.jpg");
+    }
+}

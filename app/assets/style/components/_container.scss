@@ -1,0 +1,55 @@
+.container-custom-md {
+    max-width: 920px;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+        max-width: 690px;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 330px;
+        margin: 0 15px;
+    }
+}
+
+.container-custom-sm {
+    max-width: 730px;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+        max-width: 690px;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 330px;
+        margin: 0 15px;
+    }
+}
+
+.section {
+    padding: 92px 0;
+}
+
+.center-sqrt-container {
+    @include fixed-ratio(1, 1);
+}
+
+
+// ----- picture containers -----
+$pic-sizes: (
+    "sm": 175,
+    "md": 265,
+    "lg": 435,
+);
+
+@each $key, $h in $pic-sizes {
+    .pic-height-#{$key} {
+        width: 100%;
+        height: #{$h}px;
+        object-fit: cover;
+    }
+
+    @include media-breakpoint-down(md) {
+    }
+}
+
+.pic-cover {
+    @include img-cover;
+}
+

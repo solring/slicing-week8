@@ -1,0 +1,61 @@
+<% 
+  hotels = [
+    {
+      name: "Hotel Aqua",
+      star: 5,
+      reviews: "2k",
+      price: "2,480",
+    },
+    {
+      name: "Mr. Kawasaki Inn",
+      star: 4,
+      reviews: "500",
+      price: "3,380",
+    },
+    {
+      name: "Weekly Paradise",
+      star: 4,
+      reviews: "470",
+      price: "4,780",
+    },
+    {
+      name: "Beast Hotel",
+      star: 4,
+      reviews: "238",
+      price: "1,980",
+    },
+  ];
+
+ %> 
+ 
+<section class="container">
+  <h3 class="mb-4">Top Choices</h3>
+
+  <ul class="nav nav-tags mb-4">
+    <li class="nav-item">
+      <a class="nav-link active" href="#Bali"><h4>Bali <span class="notation">128</span></h4></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Okinawa"><h4>Okinawa <span class="notation">67</span></h4></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#Taipei"><h4>Taipei <span class="notation">53</span></h4></a>
+    </li>
+  </ul>
+
+  <ul class="row">
+  <% for (var i=0; i<hotels.length; i++) { %>
+    <li class="col-sm-5 col-md-3">
+      <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- i+1 -%>.jpg" alt="hotel <%- i -%>">
+      <h5 class="my-2"><%- hotels[i].name -%></h5>
+      <span class="material-icons fz-grade">
+      <% for (var j=0; j<hotels[i].star; j++) { %>
+        grade
+      <% } %>
+      </span>
+      <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
+      <p class="text-secondary">TWD <%- hotels[i].price -%></p>
+    </li>
+  <% } %>
+  </ul>
+</section>

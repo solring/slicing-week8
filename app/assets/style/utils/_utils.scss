@@ -1,39 +1,3 @@
-$properties: (
-    "lh" : line-height,
-    "fz" : font-size,
-);
-
-@each $key, $value in $properties {
-    @for $i from 1 through 50 {
-        $size: $i * 2;
-        .#{$key}-#{$size} {
-            #{$value}: #{$size}px;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    @each $key, $value in $properties {
-        @for $i from 1 through 50 {
-            $size: $i * 2;
-            .#{$key}-md-#{$size} {
-                #{$value}: #{$size}px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    @each $key, $value in $properties {
-        @for $i from 1 through 50 {
-            $size: $i * 2;
-            .#{$key}-sm-#{$size} {
-                #{$value}: #{$size}px;
-            }
-        }
-    }
-}
-
 /* layouts */
 .row-start-center {
     display: flex;
@@ -119,18 +83,6 @@ $properties: (
     justify-content: center; 
     align-items: center;
 }
-
-@for $i from 1 through 10 {
-    .order-#{$i} {
-        order: $i;
-    }
-    @include media-breakpoint-up(md) {
-        .order-md-#{$i} {
-            order: $i;
-        }
-    }
-}
-
 
 // ----- alignment -----
 .align-icons {

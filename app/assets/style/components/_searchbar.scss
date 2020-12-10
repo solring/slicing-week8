@@ -1,0 +1,29 @@
+.search-bar {
+    width: 100%; // fill the container
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    position: relative; // to enable offset
+    z-index: 100;
+
+    padding: 24px;
+
+    .search-options {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        &>li {
+            flex: 1 1 30%;
+            margin-right: 1rem;
+            .btn {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .btn.search-btn {
+        flex: 0 0 auto;
+        padding: 1rem 2rem;
+    }
+}

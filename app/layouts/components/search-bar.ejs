@@ -1,0 +1,69 @@
+<%
+  locations = [
+    ['Bangkok', 'Thailand'],
+    ['Osaka', 'Japan'],
+    ['Roma', 'Italy'],
+    ['Paris', 'France'],
+    ['Reykjavik', 'Iceland'],
+  ];
+
+  numberOptions = [
+    'Adult', 'Child', 'Room'
+  ];
+%>
+
+<form class="search-bar bg-info rounded-lg" action="search-result.html" method="get">
+  <ul class="search-options">
+    <!-- Field Destination -->
+    <li class="dropdown">
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+        <span class="material-icons">location_on</span>
+        Destination
+      </button>
+      <ul class="dropdown-menu list-unstyled">
+        <% for (var i=0; i<locations.length; i++) { %>
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons align-middle">grade</div>
+                <div>
+                  <p><%- locations[i][0] -%></p>
+                  <p class="small"><%- locations[i][1] -%></p>
+                </div>
+              </div>
+            </a>
+          </li>
+        <% } %> 
+      </ul>
+    </li>
+    
+    <!-- Field Calendar -->
+    <li>
+      <button id="searchDatePicker" class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+        <span class="material-icons align-middle">date_range</span>
+        Check-in / Check-out
+      </button>
+    </li>
+      
+
+    <!-- Field Guests -->
+    <li class="dropdown">
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+        <span class="material-icons align-middle">person</span>
+        Guests
+      </button>
+      <ul class="dropdown-menu list-unstyled">
+        <% for (var i=0; i<numberOptions.length; i++) { %>
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p><%- numberOptions[i] -%></p>
+                <div class="numberPicker">0</div>
+              </div>
+          </li>
+        <% } %> 
+        </ul>
+    </li>
+  </ul>
+
+  <button class="btn btn-primary search-btn text-uppercase" type="submit">Search</button>
+</form>
