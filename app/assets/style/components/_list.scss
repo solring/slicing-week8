@@ -1,0 +1,7 @@
+.list-divider-white {
+    @include list-w-divider(24px, #ffffff);
+}
+
+.list-divider-info {
+    @include list-w-divider(24px, $info);
+}

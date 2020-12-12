@@ -3,12 +3,3 @@
 
 $title-font-family: 'Raleway', 'Helvetica', sans-serif;
 $content-font-family: 'Open Sans', 'Arial', sans-serif;
-
-// ----- font sizes -----
-.fz-title {
-    font: normal normal 800 48px/64px Raleway;
-
-    @include media-breakpoint-down(sm) {
-        font-size: 32px;
-    }
-}

@@ -91,3 +91,13 @@
     }
     line-height: 100%;
 }
+
+// ----- text decoration -----
+.text-crossout {
+    text-decoration: line-through;
+}
+
+// ----- hovers ------
+.hover-shadow {
+    @include hoverShadow;
+}

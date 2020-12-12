@@ -1,8 +1,8 @@
 @import 'configs/bootstrap/variables';
 @import 'venders/bootstrap/bootstrap';
 
-@import 'utils/utils';
 @import 'utils/mixins';
+@import 'utils/utils';
 
 @import 'configs/fonts';
 @import 'configs/variables';
@@ -12,9 +12,10 @@
 
 @import 'components/components';
 @import 'components/images';
+@import 'components/text';
 @import 'components/container';
 @import 'components/searchbar';
-@import 'components/overlay';
+@import 'components/list';
 
 @import 'animation/animation';
 

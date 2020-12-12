@@ -23,13 +23,27 @@
 
 <%- include('components/header') -%>
 
-<%- include('components/banner-search') -%>
-<%- include('index/top-choices') -%>
-<%- include('index/popular-dest') -%>
+<% if (current == 'index') { %>
+  <%- include('components/banner-search') -%>
+  <%- include('index/top-choices') -%>
+  <%- include('index/popular-dest') -%>
+<% } else if ( current == "search-result" || current == "detail") { %>
+  <%- include('components/search-bar-lg') -%>
+<% } %>
+
+<% if (current == "search-result") { %>
+  <%- include('search-result/result') -%>
+<% } %>
 
 <%- contents -%>
 
-<%- include('components/subscribe-lg') -%>
+
+<% if (current == 'index') { %>
+  <%- include('components/subscribe-lg') -%>
+<% } else if (current == "search-result" || current == "detail") { %>
+  <%- include('components/subscribe') -%>
+<% } %>
+
 <%- include('components/footer') -%>
 
 <!-- AOS -->

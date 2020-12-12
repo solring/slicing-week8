@@ -1,4 +1,8 @@
-<% 
+<%
+  genStar = (star) => {
+    return "grade ".repeat(star);
+  };
+
   hotels = [
     {
       name: "Hotel Aqua",
@@ -49,9 +53,7 @@
       <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- i+1 -%>.jpg" alt="hotel <%- i -%>">
       <h5 class="my-2"><%- hotels[i].name -%></h5>
       <span class="material-icons fz-grade">
-      <% for (var j=0; j<hotels[i].star; j++) { %>
-        grade
-      <% } %>
+        <%- genStar(hotels[i].star) -%>
       </span>
       <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
       <p class="text-secondary">TWD <%- hotels[i].price -%></p>

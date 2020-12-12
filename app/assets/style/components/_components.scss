@@ -11,6 +11,10 @@
     }
 }
 
+// ----- subscribe section -----
+.subscribe-lg {
+    padding: 92px 0;
+}
 
 // ----- customized lists -----
 .list-mb {
@@ -31,12 +35,9 @@
     @include list-gap(16px);
 }
 
-// ---- text style
-.notation {
-    font-size: 12px;
-    vertical-align: top;
-}
-
-.fz-grade {
-    font-size: 16px;
+// --------- dividers --------
+@each $color, $value in $theme-colors {
+    .divider-#{$color} {
+        border-top: 1px solid $value;
+    }
 }

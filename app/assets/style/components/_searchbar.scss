@@ -25,5 +25,17 @@
     .btn.search-btn {
         flex: 0 0 auto;
         padding: 1rem 2rem;
+        text-transform: uppercase;
     }
+}
+
+.search-title {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-subtitle {
+    font-size: 14px;
+    color: $secondary;
 }

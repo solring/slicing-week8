@@ -5,15 +5,19 @@
 }
 
 // ---- nav tags
-.nav-tags {
+.nav {
     h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0;
     }
+    .nav-link.active {
+        color: $primary;
+    }
+}
+.nav-tags {
     .nav-link {
         color: $secondary;
         border-bottom: 2px solid $info;
         &.active, &:hover {
-            color: $primary;
             border-bottom: 2px solid $primary;
         }
     }
@@ -24,4 +28,26 @@
     h1, h2, h3, h4, h5, h6, p{
         margin: 0;
     }
+}
+
+// ---- card
+.card {
+    border: none;
+    border-radius: $border-radius-lg;
+}
+
+.card-img-left {
+    border-top-left-radius: $border-radius-lg;
+    border-bottom-left-radius: $border-radius-lg;
+}
+
+.card-subtitle {
+    margin-bottom: 4px;
+    color: $secondary;
+    font-size: 14px;
+}
+
+.card-text {
+    color: $secondary;
+    font-size: 12px;
 }
