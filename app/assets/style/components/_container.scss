@@ -1,24 +1,22 @@
 .container-custom-md {
-    max-width: 920px;
+    max-width: 330px;
     margin: 0 auto;
-    @include media-breakpoint-down(md) {
-        max-width: 690px;
+    @include media-breakpoint-up(md) {
+        max-width: 570px;
     }
-    @include media-breakpoint-down(sm) {
-        max-width: 330px;
-        margin: 0 15px;
+    @include media-breakpoint-up(lg) {
+        max-width: 920px;
     }
 }
 
 .container-custom-sm {
-    max-width: 730px;
+    max-width: 330px;
     margin: 0 auto;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-up(md) {
         max-width: 690px;
     }
-    @include media-breakpoint-down(sm) {
-        max-width: 330px;
-        margin: 0 15px;
+    @include media-breakpoint-up(lg) {
+        max-width: 730px;
     }
 }
 
@@ -34,14 +32,23 @@ $pic-sizes: (
     "lg": 435,
 );
 
+$pic-sizes-sm: (
+    "sm": 150,
+);
+
 @each $key, $h in $pic-sizes {
     .pic-height-#{$key} {
         width: 100%;
         height: #{$h}px;
         object-fit: cover;
     }
+}
 
-    @include media-breakpoint-down(md) {
+@each $key, $h in $pic-sizes-sm {
+    @include media-breakpoint-down(sm) {
+        .pic-height-#{key} {
+            height: #{$h}px;
+        }
     }
 }
 

@@ -2,11 +2,12 @@
 @import 'venders/bootstrap/bootstrap';
 
 @import 'utils/mixins';
-@import 'utils/utils';
 
 @import 'configs/fonts';
 @import 'configs/variables';
 @import 'configs/bootstrap/overrides';
+@import 'configs/jquery-ui/overrides';
+@import 'configs/lightpick/overrides';
 
 @import 'configs/base';
 
@@ -14,9 +15,12 @@
 @import 'components/images';
 @import 'components/text';
 @import 'components/container';
-@import 'components/searchbar';
+@import 'components/search-bar';
+@import 'components/price-tag';
+@import 'components/bottom-modal';
 @import 'components/list';
 @import 'components/filter';
 
 @import 'animation/animation';
 
+@import 'utils/utils';

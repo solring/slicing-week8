@@ -1,12 +1,13 @@
 
-<div class="container">
+<div class="container px-0">
 
   <!-- Title & navbar -->
   <div class="row align-items-basline my-3">
-    <div class="col-sm-4">
+    <div class="col-md-4 text-center text-md-left">
       <h2 class="mb-0">Bangkok<span class="notation-lg text-primary">3,240</span></h2>
     </div>
-    <div class="col-sm-8">
+
+    <div class="col-md-8 d-none d-md-block">
       <ul class="nav flex-nowrap">
         <li class="nav-item">
           <a href="#" class="nav-link h6 active">Recommended</a>
@@ -24,21 +25,26 @@
     </div>
   </div>
 
-  <div class="d-sm-none">
-    <div class="d-flex align-items-center justify-content-center">
-      <a href="#filterCollapse" class="btn btn-link" data-toggle="collapse" >
-        <span class="material-icons align-middle">filter_list</span> FILTER
-      </a>
-      <a href="#" class="btn btn-link">
-        <span class="material-icons align-middle">sort</span> SORT
-      </a>
-    </div>
+  <!-- Filter btn groups -->
+  <div class="d-md-none">
+    <ul class="d-flex align-items-center justify-content-center w-100 list-row-divider-info">
+      <li>
+        <a href="#filterCollapse" class="btn btn-link btn-block" data-toggle="collapse" >
+          <span class="material-icons align-middle">filter_list</span> FILTER
+        </a>
+      </li>
+      <li>
+        <a href="#" class="btn btn-link btn-block">
+          <span class="material-icons align-middle">sort</span> SORT
+        </a>
+      </li>
+    </ul>
   </div>
 
   <div class="row">
 
     <!-- Filter navbar -->
-    <div class="col-sm-4">
+    <div class="col-md-4 d-none d-md-block">
       <nav class="card bg-info border-0">
         <div class="card-body">
           <%- include('./filter') -%> 
@@ -47,13 +53,31 @@
     </div>
 
     <!-- Results -->
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <%- include('./result-hotels') -%>
+
+      <nav class="bg-info rounded-lg p-3 w-100 mt-4 mb-5 d-flex justify-content-between">
+        <button class="btn btn-outline-primary text-uppercase">previous</button>
+        <ul class="pagination">
+
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item d-none d-md-block"><a class="page-link" href="#">3</a></li>
+          <li class="page-item d-none d-lg-block"><a class="page-link" href="#">4</a></li>
+          <li class="page-item d-none d-lg-block"><a class="page-link" href="#">5</a></li>
+          <li class="page-item d-none d-lg-block"><a class="page-link" href="#">6</a></li>
+          <li class="page-item d-none d-lg-block"><a class="page-link" href="#">7</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">9</a></li>
+
+        </ul>
+        <button class="btn btn-primary text-uppercase">next</button>
+      </nav>
     </div>
   </div>
 </div>
 
-
+<!-- Filter navbar collapse: used in sm layout -->
 <div id="filterCollapse" class="filter-collapse collapse">
 
   <div class="filter-header bg-light">
@@ -66,16 +90,16 @@
   </div>
 
   <div class="filter-content bg-info"> 
-    <div class="container">
+    <div class="container pt-4">
       <%- include('./filter') -%> 
     </div>
   </div>
 
-  <div class="filter-footer">
+  <div class="filter-footer bottom-modal text-left">
     <h4 class="mb-4">Find 1,245 results</h4>
     <div class="row">
-      <div class="col-6"><button class="btn btn-outline-light text-uppercase">clear</button></div>
-      <div class="col-6"><button class="btn btn-primary text-uppercase">filter</button></div>
+      <div class="col-6"><button class="btn btn-outline-light btn-lg btn-block text-uppercase">clear</button></div>
+      <div class="col-6"><button class="btn btn-primary btn-lg btn-block text-uppercase">filter</button></div>
     </div>
   </div>
 </div>

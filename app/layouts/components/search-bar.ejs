@@ -13,10 +13,10 @@
 %>
 
 <form class="search-bar bg-info rounded-lg" action="search-result.html" method="get">
-  <ul class="search-options">
+  <ul class="search-options flex-column flex-lg-row">
     <!-- Field Destination -->
-    <li class="dropdown">
-      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
+    <li class="dropdown mb-3 mb-lg-0">
+      <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
         <span class="material-icons align-middle">location_on</span>
         Destination
       </button>
@@ -38,8 +38,8 @@
     </li>
     
     <!-- Field Calendar -->
-    <li>
-      <button id="searchDatePicker" class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+    <li class="mb-3 mb-lg-0">
+      <button id="searchDatePicker" class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown">
         <span class="material-icons align-middle">date_range</span>
         Check-in / Check-out
       </button>
@@ -47,8 +47,8 @@
       
 
     <!-- Field Guests -->
-    <li class="dropdown">
-      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
+    <li class="dropdown mb-3 mb-lg-0">
+      <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
         <span class="material-icons align-middle">person</span>
         Guests
       </button>
@@ -64,7 +64,7 @@
         </ul>
     </li>
     <li class="flex-grow-0 flex-shrink-0">
-      <button class="btn btn-primary search-btn" type="submit">Search</button>
+      <button class="btn btn-primary search-btn btn-block" type="submit">Search</button>
     </li>
   </ul>
 

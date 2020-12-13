@@ -14,17 +14,22 @@
 
 <div class="bg-info">
 
-<form class="search-bar container" action="search-result.html" method="get">
-  <ul class="search-options">
+<form class="search-bar container px-0" action="search-result.html" method="get">
+  <ul class="search-options search-collapse-sm">
     <!-- Field Destination -->
     <li class="dropdown">
       <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
-        <div class="d-flex align-items-center">
-          <div class="material-icons pr-lg-3 pr-2">location_on</div>
-          <div class="text-left">
-            <h5 class="search-title">destination</h5>
-            <p class="search-subtitle search-location">Bangkok, Thailand</p>
+        <div class="d-none d-md-block">
+          <div class="d-flex align-items-center">
+            <div class="material-icons pr-lg-3 pr-2">location_on</div>
+            <div class="text-left">
+              <h5 class="search-title">destination</h5>
+              <p class="search-subtitle search-location">Bangkok, Thailand</p>
+            </div>
           </div>
+        </div>
+        <div class="d-md-none text-secondary">
+          Bangkok
         </div>
       </button>
 
@@ -48,7 +53,8 @@
     <!-- Field Calendar -->
     <li>
       <button id="searchDatePicker" class="btn btn-light btn-block" type="button" data-toggle="dropdown">
-        <div class="d-flex align-items-center">
+
+        <div class="d-none d-md-flex align-items-center">
           <div class="material-icons pr-lg-3 pr-2">date_range</div>
 
           <ul class="list-unstyled list-row-divider-info d-none d-lg-flex">
@@ -58,31 +64,38 @@
             </li>
             <li>
               <h5 class="search-title">check-out</h6>
-              <p class="search-subtitle search-date-end">18 June</p>
+              <p class="search-subtitle search-date-end">19 June</p>
             </li>
           </ul>
-
           <div class="text-left d-lg-none">
             <h5 class="search-title">check-in / out</h5>
-            <p class="search-subtitle search-n-guests">17 June / 18 June</p>
+            <p class="search-subtitle search-n-guests">17 june / 19 june</p>
           </div> 
 
-        </div> 
+        </div>
+        <div class="d-md-none text-secondary">
+          17 june / 19 june 
+        </div>
       </button>
     </li>
       
 
     <!-- Field Guests -->
-    <li class="dropdown">
+    <li class="dropdown border-right-0">
+
       <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
-        <div class="d-flex align-items-center">
+        <div class="d-none d-md-flex align-items-center">
           <div class="material-icons pr-lg-3 pr-2">person</div>
           <div class="text-left">
             <h5 class="search-title">guests</h5>
             <p class="search-subtitle search-n-guests">2 adults・1 room</p>
           </div>
         </div>
+        <div class="d-md-none text-secondary">
+          2 adults・1 room
+        </div>
       </button>
+
       <ul class="dropdown-menu list-unstyled w-100">
         <% for (var i=0; i<numberOptions.length; i++) { %>
           <li class="dropdown-item">
@@ -94,7 +107,7 @@
         <% } %> 
         </ul>
     </li>
-    <li class="flex-grow-0 flex-shrink-0">
+    <li class="flex-grow-0 flex-shrink-0 d-none d-md-block">
       <button class="btn btn-primary search-btn text-uppercase" type="submit">Search</button>
     </li>
   </ul>

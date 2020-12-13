@@ -101,3 +101,14 @@
 .hover-shadow {
     @include hoverShadow;
 }
+
+// ----- clear borders -----
+@include media-breakpoint-down(sm) {
+    .no-border-down-sm{
+        &>li {
+            border: none;
+            padding: 0;
+            margin-bottom: 4px;
+        }
+    }
+}

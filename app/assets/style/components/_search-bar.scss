@@ -4,7 +4,10 @@
     position: relative; // to enable offset
     z-index: 100;
 
-    padding: 24px;
+    padding: 1.5rem;
+    @include media-breakpoint-down(sm) {
+        padding: 1rem;
+    }
 
     .search-options {
         display: flex;
@@ -16,10 +19,36 @@
             @include media-breakpoint-down(lg) {
                 margin-right: .5rem;
             }
-            .btn {
+            @include media-breakpoint-down(md) {
+                margin-right: 0;
+            }
+            .btn-light {
                 padding: 1rem;
                 @include media-breakpoint-down(lg) {
                     padding: 1rem .5rem;
+                }
+            }
+        }
+    }
+
+    .search-collapse-sm {
+        @include media-breakpoint-down(sm) {
+            @include list-w-divider(8px, $white, 1px, true);
+        }
+
+        &>li {
+            .btn {
+                @include media-breakpoint-down(sm) {
+                    padding: 0;
+                }
+            }
+
+            .btn-light {
+                background: $light;
+                border: none;
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                    background: $info;
                 }
             }
         }

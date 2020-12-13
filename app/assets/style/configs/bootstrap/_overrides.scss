@@ -9,8 +9,11 @@
     h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0;
     }
-    .nav-link.active {
-        color: $primary;
+    .nav-link {
+        color: $secondary;
+        &.active {
+            color: $primary;
+        }
     }
 }
 .nav-tags {
@@ -34,14 +37,27 @@
 .card {
     border: none;
     border-radius: $border-radius-lg;
+    @include media-breakpoint-down(sm) {
+        border-radius: 0;
+    }
+}
+
+.card-body {
+    @include media-breakpoint-down(md) {
+        padding: 4px 8px;
+    }
 }
 
 .card-img-left {
     border-top-left-radius: $border-radius-lg;
     border-bottom-left-radius: $border-radius-lg;
+    @include media-breakpoint-down(sm) {
+        border-radius: 0;
+    }
 }
 
 .card-subtitle {
+    margin-top: 0;
     margin-bottom: 4px;
     color: $secondary;
     font-size: 14px;
@@ -50,4 +66,25 @@
 .card-text {
     color: $secondary;
     font-size: 12px;
+}
+
+.card-title, .card-subtitle {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+    }
+}
+
+// Pagination
+.page-item {
+    .page-link {
+        border: 0;
+        background: none;
+        font-weight: bold;
+    }
+    &.active, &:hover {
+        .page-link {
+            background-color: $light;
+            color: $dark;
+        }
+    }
 }
