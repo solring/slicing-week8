@@ -1,8 +1,5 @@
 .search-bar {
     width: 100%; // fill the container
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
 
     position: relative; // to enable offset
     z-index: 100;
@@ -10,22 +7,29 @@
     padding: 24px;
 
     .search-options {
-        flex: 1 1 auto;
         display: flex;
-        align-items: center;
+        flex-wrap: nowrap;
+
         &>li {
-            flex: 1 1 30%;
+            flex: 1 1 0%;
             margin-right: 1rem;
+            @include media-breakpoint-down(lg) {
+                margin-right: .5rem;
+            }
             .btn {
                 padding: 1rem;
+                @include media-breakpoint-down(lg) {
+                    padding: 1rem .5rem;
+                }
             }
         }
     }
 
     .btn.search-btn {
-        flex: 0 0 auto;
+        height: 100%;
         padding: 1rem 2rem;
         text-transform: uppercase;
+        height: 100%;
     }
 }
 

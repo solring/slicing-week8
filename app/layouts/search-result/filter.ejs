@@ -1,0 +1,120 @@
+<% 
+  genCheckBox = (sec) => {
+    res = "<h6 class=\"card-title\">" + sec.title + "</h6>";
+    res += "<ul class=\"list-gap-8\">"
+
+    for (var i = 0; i<sec.options.length; i++) {
+      let substr = "<li class=\"form-check\"> \
+                <input type=\"checkbox\" class=\"form-check-input\" id=\"" + sec.options[i].name + "Check\" name=\"" + sec.options[i].name + "\"> \
+                <label for=\"" + sec.options[i].name + "Check\" class=\"form-check-label text-secondary\">" + sec.options[i].text + "</label> \
+              </li>";
+      res += substr;
+    }
+    res += "</ul>";
+
+    return res;
+  };
+
+  genBudgetRange = () => {
+    res = "<h6 class=\"card-title\">Budget</h6>";
+    res += "<input type=\"range\" id=\"budgetRange\" name=\"budgetRange\" class=\"form-control-range\">";
+    return res;
+  };
+
+  sections = [
+    {
+      title: "Deals",
+      options: [
+        {
+          name: "freeCancel",
+          text: "Free cancel",
+        },
+        {
+          name: "noPrepay",
+          text: "No prepayment",
+        },
+        {
+          name: "specialOffer",
+          text: "Special offer",
+        },
+      ],
+    },
+    {
+      title: "Popular Filters",
+      options: [
+        {
+          name: "breakfast",
+          text: "Breakfast included",
+        },
+        {
+          name: "freeWifi",
+          text: "Free Wifi",
+        },
+        {
+          name: "swimmingPool",
+          text: "Swimming pool",
+        },
+      ],
+    },
+    {
+      title: "Stey Type",
+      options: [
+        {
+          name: "hotel",
+          text: "Hotel",
+        },
+        {
+          name: "apartment",
+          text: "Apartment",
+        },
+        {
+          name: "unique",
+          text: "Unique",
+        },
+        {
+          name: "hostel",
+          text: "Hostel",
+        },
+      ],
+    },
+  ]
+%>
+
+<form target="#" method="get">
+
+  <ul class="list-divider-white">
+    <li>
+      <%- genCheckBox(sections[0]) -%> 
+    </li>
+    <li>
+      <%- genCheckBox(sections[1]) -%> 
+    </li>
+    <li>
+      <%- genBudgetRange() -%> 
+    </li>
+    <li>
+      <h6 class="card-title">Rating</h6>
+    <% for (var i=5; i>0; i--) { %> 
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="rate<%- i -%>Check" name="rate<%- i -%>">
+        <label for="rate<%- i -%>Check" class="form-check-label">
+          <span class="material-icons align-middle">
+          <% for (var j=0; j<i; j++) { %>
+            grade
+          <% } %> 
+          </span>
+          <span class="text-secondary"><%- i -%>.0</span>
+        </label>
+      </div>
+    <% } %>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="unrateCheck" name="unrate">
+        <label for="unrateCheck" class="form-check-label text-secondary">Unrated</label>
+      </div>
+    </li>
+    <li>
+      <%- genCheckBox(sections[2]) -%> 
+    </li>
+  </ul>
+
+</form>

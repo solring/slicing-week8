@@ -134,7 +134,9 @@
 
           <!-- Room Image -->
           <div class="col-5 col-sm-4">
-            <img class="card-img-left pic-height-sm" src="./assets/images/<%- results[i].img -%>" alt="hotel picture <%-i-%>" class="card-img">
+            <div class="pic-fill-container">
+              <img class="card-img-left pic-height-sm" src="./assets/images/<%- results[i].img -%>" alt="hotel picture <%-i-%>" class="card-img">
+            </div>
           </div>
 
           <!-- Descriptions -->
@@ -144,13 +146,13 @@
               <!-- top-left -->
               <div class="col-sm-7">
                 <a href="#" class="card-text"><%- results[i].location -%></a>
-                <span class="card-text d-none d-md-inline">・<%- results[i].distance -%>km from center</span>
-                <h4 class="card-title"><%- results[i].name -%></h4>
+                <span class="card-text d-none d-lg-inline">・<%- results[i].distance -%>km from center</span>
+                <h4 class="card-title fz-hotel-title"><%- results[i].name -%></h4>
               </div>
 
               <!-- top-right-->
               <div class="col-sm-5">
-                <div class="d-flex align-items-center justify-content-end flex-wrap">
+                <div class="d-flex flex-column align-items-end align-items-lg-center justify-content-lh-end flex-lg-row">
                     <div class="material-icons fz-grade">
                       <%- genStar(results[i].star) -%>
                     </div>
@@ -171,13 +173,13 @@
 
               <!-- bottom-right-->
               <div class="col-sm-5">
-                <div class="d-flex flex-column justify-content-end align-items-end">
+                <div class="d-flex h-100 flex-column justify-content-end align-items-end">
                   <p class="card-text">per night</p>
                   <% if (results[i].oldPrice != undefined) { %>
                     <p class="text-secondary text-crossout">TWD <%- results[i].oldPrice -%></p>
-                    <h4>TWD <span class="text-primary"><%- results[i].price -%></span></h4>
+                    <h4 class="fz-hotel-title">TWD <span class="h6-md text-primary"><%- results[i].price -%></span></h4>
                   <% } else { %>
-                    <h4>TWD <%- results[i].price -%></h4>
+                    <h4 class="fz-hotel-title">TWD <%- results[i].price -%></h4>
                   <% } %>
                 </div>
               </div>

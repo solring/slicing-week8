@@ -7,13 +7,13 @@ $primary:                       #6C51E2;
 $light:                         #FFFFFF;
 $info:                          #F1F0F8;
 
-
 // Links
 $link-color:                    black;
 $link-hover-color:              $primary;
 $link-hover-decoration:         none;
 
 // Font sizes
+$enable-responsive-font-sizes:  true;
 $font-size-base:                1rem;
 
 $h1-font-size:                  $font-size-base * 1; //48px

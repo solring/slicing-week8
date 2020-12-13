@@ -34,10 +34,3 @@
 .list-mb-xs {
     @include list-gap(16px);
 }
-
-// --------- dividers --------
-@each $color, $value in $theme-colors {
-    .divider-#{$color} {
-        border-top: 1px solid $value;
-    }
-}

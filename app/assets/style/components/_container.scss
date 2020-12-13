@@ -45,6 +45,10 @@ $pic-sizes: (
     }
 }
 
+.pic-fill-container{
+    @include pic-fill-container;
+}
+
 .pic-cover {
     @include img-cover;
 }

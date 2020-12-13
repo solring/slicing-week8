@@ -20,3 +20,9 @@
         font-size: 32px;
     }
 }
+
+.fz-hotel-title {
+    @include media-breakpoint-down(lg) {
+        font-size: 16px;
+    }
+}

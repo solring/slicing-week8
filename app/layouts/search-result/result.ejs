@@ -24,92 +24,26 @@
     </div>
   </div>
 
+  <div class="d-sm-none">
+    <div class="d-flex align-items-center justify-content-center">
+      <a href="#filterCollapse" class="btn btn-link" data-toggle="collapse" >
+        <span class="material-icons align-middle">filter_list</span> FILTER
+      </a>
+      <a href="#" class="btn btn-link">
+        <span class="material-icons align-middle">sort</span> SORT
+      </a>
+    </div>
+  </div>
+
   <div class="row">
 
     <!-- Filter navbar -->
     <div class="col-sm-4">
       <nav class="card bg-info border-0">
-        <form class="card-body">
-
-          <ul class="list-divider-white">
-            <li>
-              <h6 class="card-title">Deals</h6>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="freeCancelCheck" name="freeCancel">
-                <label for="freeCancelCheck" class="form-check-label">Free Cancellation</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="noPrepayCheck" name="noPrepay">
-                <label for="noPrepayCheck" class="form-check-label">No Prepayment</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="specialOffersCheck" name="specialOffers">
-                <label for="freeCancelCheck" class="form-check-label">Special Offers</label>
-              </div>
-            </li>
-            <li>
-              <h6 class="card-title">Popular Filters</h6>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="breakfastCheck" name="breakfast">
-                <label for="breakfastCheck" class="form-check-label">Breakfast Included</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="freeWifiCheck" name="freeWifi">
-                <label for="freeWifiCheck" class="form-check-label">Free Wifi</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="swimmingPoolCheck" name="swimmingPool">
-                <label for="swimmingPoolCheck" class="form-check-label">Swimming Poll</label>
-              </div>
-            </li>
-            <li>
-              <h6 class="card-title">Budget</h6>
-              <input type="range" id="budgetRange" name="budgetRange" class="form-control-range">
-            </li>
-            <li>
-              <h6 class="card-title">Rating</h6>
-            <% for (var i=5; i>0; i--) { %> 
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="rate<%- i -%>Check" name="rate<%- i -%>">
-                <label for="rate<%- i -%>Check" class="form-check-label">
-                  <span class="material-icons">
-                  <% for (var j=0; j<i; j++) { %>
-                    grade
-                  <% } %> 
-                  </span><%- i -%>.0
-                </label>
-              </div>
-            <% } %>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="unrateCheck" name="unrate">
-                <label for="unrateCheck" class="form-check-label">Unrated</label>
-              </div>
-            </li>
-            <li>
-              <h6 class="card-title">Stay Type</h6>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="stayHotelCheck" name="stayHotel">
-                <label for="stayHotelCheck" class="form-check-label">Hotel</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="apartmentCheck" name="apartment">
-                <label for="apartmentCheck" class="form-check-label">Apartment</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="uniqueCheck" name="unique">
-                <label for="uniqueCheck" class="form-check-label">Unique</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="hostelCheck" name="hostel">
-                <label for="hostelCheck" class="form-check-label">Hostel</label>
-              </div>
-            </li>
-          </ul>
-
-        </form>
-
+        <div class="card-body">
+          <%- include('./filter') -%> 
+        </div>
       </nav>
-
     </div>
 
     <!-- Results -->
@@ -118,3 +52,32 @@
     </div>
   </div>
 </div>
+
+
+<div id="filterCollapse" class="filter-collapse collapse">
+
+  <div class="filter-header bg-light">
+    <div>
+      <span class="material-icons align-middle">filter_list</span> FILTER
+    </div>
+    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#filterCollapse">
+      <span class="material-icons">close</span>
+    </button>
+  </div>
+
+  <div class="filter-content bg-info"> 
+    <div class="container">
+      <%- include('./filter') -%> 
+    </div>
+  </div>
+
+  <div class="filter-footer">
+    <h4 class="mb-4">Find 1,245 results</h4>
+    <div class="row">
+      <div class="col-6"><button class="btn btn-outline-light text-uppercase">clear</button></div>
+      <div class="col-6"><button class="btn btn-primary text-uppercase">filter</button></div>
+    </div>
+  </div>
+</div>
+
+  

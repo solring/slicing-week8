@@ -16,11 +16,11 @@
   <ul class="search-options">
     <!-- Field Destination -->
     <li class="dropdown">
-      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
         <span class="material-icons align-middle">location_on</span>
         Destination
       </button>
-      <ul class="dropdown-menu list-unstyled">
+      <ul class="dropdown-menu list-unstyled w-100">
         <% for (var i=0; i<locations.length; i++) { %>
           <li class="dropdown-item">
             <a href="#" class="d-block">
@@ -48,22 +48,24 @@
 
     <!-- Field Guests -->
     <li class="dropdown">
-      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
         <span class="material-icons align-middle">person</span>
         Guests
       </button>
-      <ul class="dropdown-menu list-unstyled">
+      <ul class="dropdown-menu list-unstyled w-100">
         <% for (var i=0; i<numberOptions.length; i++) { %>
           <li class="dropdown-item">
               <div class="d-flex justify-content-between">
                 <p><%- numberOptions[i] -%></p>
-                <div class="numberPicker">0</div>
+                <%- include('./number-picker', {number: 0}) -%>
               </div>
           </li>
         <% } %> 
         </ul>
     </li>
+    <li class="flex-grow-0 flex-shrink-0">
+      <button class="btn btn-primary search-btn" type="submit">Search</button>
+    </li>
   </ul>
 
-  <button class="btn btn-primary search-btn" type="submit">Search</button>
 </form>
