@@ -31,12 +31,15 @@
         }
     }
 
-    .search-collapse-sm {
+    .search-options.search-collapse-sm {
         @include media-breakpoint-down(sm) {
             @include list-w-divider(8px, $white, 1px, true);
         }
 
         &>li {
+            @include media-breakpoint-down(md) {
+                margin-right: .5rem;
+            }
             .btn {
                 @include media-breakpoint-down(sm) {
                     padding: 0;

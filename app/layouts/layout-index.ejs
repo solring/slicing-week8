@@ -26,15 +26,23 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
+<nav class="fixed-top">
+  <%- include('components/header') -%>
+<% if ( current == "search-result" || current == "detail") { %>
+  <%- include('components/search-bar-lg') -%>
+<% } %>
+</nav>
 
-<%- include('components/header') -%>
+<% if ( current == "search-result" || current == "detail") { %>
+<div class="content-lg">
+<% } else { %>
+<div class="content">
+<% } %>
 
 <% if (current == 'index') { %>
   <%- include('components/banner-search') -%>
   <%- include('index/top-choices') -%>
   <%- include('index/popular-dest') -%>
-<% } else if ( current == "search-result" || current == "detail") { %>
-  <%- include('components/search-bar-lg') -%>
 <% } %>
 
 <% if (current == "search-result") { %>
@@ -50,6 +58,7 @@
   <%- include('components/subscribe') -%>
 <% } %>
 
+</div>
 <%- include('components/footer') -%>
 
 <!-- AOS -->

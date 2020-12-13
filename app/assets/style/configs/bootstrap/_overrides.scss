@@ -23,6 +23,10 @@
         &.active, &:hover {
             border-bottom: 2px solid $primary;
         }
+        @include media-breakpoint-down(sm) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
     }
 }
 
