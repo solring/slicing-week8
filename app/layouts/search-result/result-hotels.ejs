@@ -145,7 +145,7 @@
 
               <!-- top-left -->
               <div class="col-md-7">
-                <a href="#" class="card-text text-primary"><%- results[i].location -%></a>
+                <a href="#" class="card-text"><%- results[i].location -%></a>
                 <span class="card-text d-none d-lg-inline">・<%- results[i].distance -%>km from center</span>
                 <h4 class="card-title fz-hotel-title"><%- results[i].name -%></h4>
               </div>
@@ -166,7 +166,7 @@
                 <p class="card-text mb-3">2 guests・1 bed (Queen size)</p>
                 <div class="d-none d-md-flex align-items-center flex-wrap">
                 <% for (var j=0; j<results[i].tags.length; j++) { %>
-                  <div class="badge badge-info rounded-pill"><%- tags[ results[i].tags[j] ] -%></div>
+                  <div class="badge badge-info badge-pill"><%- tags[ results[i].tags[j] ] -%></div>
                 <% } %>
                 </div>
               </div>

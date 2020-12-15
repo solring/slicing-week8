@@ -60,3 +60,29 @@ $pic-sizes-sm: (
     @include img-cover;
 }
 
+// card-height
+$heights: (
+    "sm": 175,
+    "md": 265,
+    "lg": 435,
+);
+
+$heights-sm: (
+    "sm": 150,
+);
+
+@each $key, $h in $heights{
+    .height-#{$key} {
+        width: 100%;
+        height: #{$h}px;
+    }
+}
+
+@each $key, $h in $heights-sm{
+    @include media-breakpoint-down(sm) {
+        .height-#{$key} {
+            width: 100%;
+            height: #{$h}px;
+        }
+    }
+}

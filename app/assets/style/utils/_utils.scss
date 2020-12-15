@@ -78,7 +78,26 @@
     justify-content: center; 
 }
 
+.centering-row {
+    display: flex;
+    justify-content: center; 
+}
+
+.centering-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.centering-total-row {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 .fit-centering {
+    display: flex;
     height: 100%;
     justify-content: center; 
     align-items: center;

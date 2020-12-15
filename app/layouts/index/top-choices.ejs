@@ -50,13 +50,15 @@
   <ul class="row">
   <% for (var i=0; i<hotels.length; i++) { %>
     <li class="col-md-5 col-lg-3">
-      <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- i+1 -%>.jpg" alt="hotel <%- i -%>">
-      <h5 class="my-2"><%- hotels[i].name -%></h5>
-      <span class="material-icons fz-grade">
-        <%- genStar(hotels[i].star) -%>
-      </span>
-      <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
-      <p class="text-secondary">TWD <%- hotels[i].price -%></p>
+      <a class="d-block text-dark" href="./detail.html">
+        <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- i+1 -%>.jpg" alt="hotel <%- i -%>">
+        <h5 class="my-2"><%- hotels[i].name -%></h5>
+        <span class="material-icons fz-grade">
+          <%- genStar(hotels[i].star) -%>
+        </span>
+        <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
+        <p class="text-secondary">TWD <%- hotels[i].price -%></p>
+      </a>
     </li>
   <% } %>
   </ul>

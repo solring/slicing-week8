@@ -11,6 +11,7 @@
     }
 }
 
+// ----- For content offset below header
 .header {
     height: $header-height;
     @include media-breakpoint-down(md) {
@@ -32,7 +33,6 @@
     }
 }
 
-
 // ----- subscribe section -----
 .subscribe-lg {
     padding: 92px 0;
@@ -52,24 +52,23 @@
             width: 50%;
         }
     }
-    
 }
 
-// ----- customized lists -----
-.list-mb {
-    @include list-gap(58px);
+.subscribe h2 {
+    @include media-breakpoint-down(sm) {
+        font-size: 22px;
+        line-height: 24px;
+    } 
+}
+
+// ----- block display badge -----
+.div-badge {
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #00000099;
+    margin-right: 8px;
+
     @include media-breakpoint-down(md) {
-        @include list-gap(30px);
+        font-size: 14px;
     }
-}
-
-.list-mb-sm {
-    @include list-gap(30px);
-    @include media-breakpoint-down(md) {
-        @include list-gap(16px);
-    }
-}
-
-.list-mb-xs {
-    @include list-gap(16px);
 }

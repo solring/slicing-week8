@@ -5,13 +5,19 @@
 }
 
 // ---- nav tags
+.navbar .nav-link {
+    color: $dark;
+    &:hover{
+        color: $primary;
+    }
+}
 .nav {
     h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0;
     }
     .nav-link {
         color: $secondary;
-        &.active {
+        &.active, &:hover{
             color: $primary;
         }
     }
@@ -47,16 +53,9 @@
 }
 
 .card-body {
-    @include media-breakpoint-down(md) {
+    padding: 1rem;
+    @include media-breakpoint-down(lg) {
         padding: 4px 8px;
-    }
-}
-
-.card-img-left {
-    border-top-left-radius: $border-radius-lg;
-    border-bottom-left-radius: $border-radius-lg;
-    @include media-breakpoint-down(sm) {
-        border-radius: 0;
     }
 }
 

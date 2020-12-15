@@ -8,8 +8,8 @@ $light:                         #FFFFFF;
 $info:                          #F1F0F8;
 
 // Links
-$link-color:                    black;
-$link-hover-color:              $primary;
+$link-color:                    $primary;
+$link-hover-color:              darken($primary, 0.7);
 $link-hover-decoration:         none;
 
 // Font sizes

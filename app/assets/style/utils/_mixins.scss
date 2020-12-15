@@ -16,7 +16,8 @@
 
 @mixin list-w-divider($pad, $color, $lwidth: 1px, $row: false) {
     @if ($row) {
-        &>li {
+        
+        &>li, th, td {
             padding-right: $pad;
             border-right: $lwidth solid $color;
             margin-right: $pad;
@@ -28,7 +29,7 @@
             }
         }
     } @else {
-        &>li {
+        &>li, tr {
             padding-bottom: $pad;
             border-bottom: $lwidth solid $color;
             margin-bottom: $pad;

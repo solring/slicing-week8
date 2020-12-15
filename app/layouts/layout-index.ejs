@@ -27,9 +27,13 @@
 </head>
 <body>
 <nav class="fixed-top">
+
   <%- include('components/header') -%>
-<% if ( current == "search-result" || current == "detail") { %>
-  <%- include('components/search-bar-lg') -%>
+
+<% if ( current == "search-result") { %>
+  <%- include('components/search-bar-lg', {options: ""}) -%>
+<% } else if ( current == "detail" ) { %>
+  <%- include('components/search-bar-lg', {options: "with-return-btn"}) -%>
 <% } %>
 </nav>
 
@@ -51,6 +55,9 @@
 
 <%- contents -%>
 
+<% if (current == 'detail') { %>
+  <%- include('detail/rooms') -%>
+<% } %>
 
 <% if (current == 'index') { %>
   <%- include('components/subscribe-lg') -%>
