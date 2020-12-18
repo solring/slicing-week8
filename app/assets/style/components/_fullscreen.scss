@@ -1,4 +1,4 @@
-.filter-collapse {
+.fullscreen-collapse {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,9 +9,13 @@
 
     width: 100vw;
     height: 100vh;
+    
+    &.collapsing {
+        position: fixed;
+    }
 }
 
-.filter-header {
+.fullscreen-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +25,7 @@
     padding: 16px;
 }
 
-.filter-content {
+.fullscreen-content {
     flex: 1 1 auto;
     overflow-y: scroll;
     &>div {
@@ -29,7 +33,7 @@
     }
 }
 
-.filter-footer {
+.fullscreen-footer {
     position: absolute;
     left: 0;
     bottom: 0;    

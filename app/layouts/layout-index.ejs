@@ -59,6 +59,10 @@
   <%- include('detail/rooms') -%>
 <% } %>
 
+<% if (current == 'booking') { %>
+  <%- include('booking/booking') -%>
+<% } %>
+
 <% if (current == 'index') { %>
   <%- include('components/subscribe-lg') -%>
 <% } else if (current == "search-result" || current == "detail") { %>
@@ -66,7 +70,13 @@
 <% } %>
 
 </div>
-<%- include('components/footer') -%>
+
+
+<% if (current == 'booking' || current == 'confirmation') { %>
+  <%- include('components/footer', { short: true }) -%>
+<% } else { %>
+  <%- include('components/footer', { short: false }) -%>
+<% } %>
 
 <!-- AOS -->
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

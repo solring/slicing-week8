@@ -123,11 +123,34 @@
 
 // ----- clear borders -----
 @include media-breakpoint-down(sm) {
-    .no-border-down-sm{
+    .no-divider-down-sm{
         &>li {
             border: none;
             padding: 0;
             margin-bottom: 4px;
+        }
+    }
+
+}
+
+// responsive rounded border
+$sizes: (
+    "sm",
+    "md",
+    "lg",
+    "xl",
+);
+
+@each $size in $sizes {
+    @include media-breakpoint-up($size) {
+        .rounded-lg-up-#{$size} {
+            border-radius: $border-radius-lg;
+        }
+        .rounded-up-#{$size} {
+            border-radius: $border-radius;
+        }
+        .rounded-sm-up-#{$size} {
+            border-radius: $border-radius-sm;
         }
     }
 }

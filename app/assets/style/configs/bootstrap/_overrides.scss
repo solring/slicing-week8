@@ -91,3 +91,19 @@
         }
     }
 }
+
+// collapse
+.collapse.collapse-absolute, .collapsing.collapse-absolute {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1030;
+}
+
+.collapse.collapse-disabled-md {
+    @include media-breakpoint-up(md) {
+        &:not(.show) {
+            display: block;
+        }
+    }
+}
