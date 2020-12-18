@@ -1,0 +1,13 @@
+.card-img-left {
+    @include media-breakpoint-up(sm) {
+        border-top-left-radius: $border-radius-lg;
+        border-bottom-left-radius: $border-radius-lg;
+    }
+}
+
+.card-body-narrow {
+    padding: 1rem;
+    @include media-breakpoint-down(md) {
+        padding: 4px 8px;
+    }
+}
