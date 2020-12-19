@@ -27,3 +27,9 @@ $cities: (
         background: linear-gradient(270deg, #00000000 0%, #000000 100%), center / cover no-repeat url("../images/#{$city}.jpg");
     }
 }
+
+// ----- login background image -----
+.login-bg {
+    background: center / cover no-repeat url("../images/login.jpg");
+    z-index: 990;
+}

@@ -30,15 +30,18 @@
 <!-- Start of app -->
 <div class="app">
 
+<!-- Start of header -->
 <nav class="header">
-<%- include('components/header') -%>
+<%- include('components/header', {simple: false}) -%>
 <% if ( current == "search-result") { %>
   <%- include('components/search-bar-lg', {options: ""}) -%>
 <% } else if ( current == "detail" ) { %>
   <%- include('components/search-bar-lg', {options: "with-return-btn"}) -%>
 <% } %>
 </nav>
+<!-- End of header -->
 
+<!-- Start of content -->
 <div class="content">
 
 <% if (current == 'index') { %>
@@ -66,14 +69,16 @@
 <% } else if (current == "search-result" || current == "detail") { %>
   <%- include('components/subscribe') -%>
 <% } %>
-
 </div>
+<!-- End of content -->
 
+<!-- Start of footer -->
 <% if (current == 'booking' || current == 'confirmation') { %>
   <%- include('components/footer', { short: true }) -%>
 <% } else { %>
   <%- include('components/footer', { short: false }) -%>
 <% } %>
+<!-- End of footer -->
 
 </div>
 <!-- End of app -->

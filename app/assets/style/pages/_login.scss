@@ -1,0 +1,22 @@
+.login-background {
+    width: 70%;
+}
+
+.login-page-padding {
+    padding-top: 162px;
+    @include media-breakpoint-down(md) {
+        padding-top: 80px;
+    }
+}
+
+.login-page-content {
+    z-index: 1020;
+}
+
+.location-tag {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    z-index: 1020;
+    opacity: 0.8;
+}
