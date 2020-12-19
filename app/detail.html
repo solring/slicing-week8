@@ -7,7 +7,8 @@ current: detail
 
 <div class="pt-md-4 container">
 
-  <div class="row hotel-pic-group no-gutters">
+  <!-- Picture grid -->
+  <div class="row hotel-pic-group no-gutters d-none d-md-flex">
     <div class="col-md-7 h-100">
       <div class="pic-fill-container">
         <img src="./assets/images/Rachada1.jpg" alt="room pic 1">
@@ -37,6 +38,27 @@ current: detail
     </div>
   </div>
 
+  <!-- Picture swiper -->
+  <div id="swiperPic" class="swiper-container hotel-pic-swiper d-md-none">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada1.jpg" alt="room pic 1"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada2.jpg" alt="room pic 2"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada3.jpg" alt="room pic 3"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada4.jpg" alt="room pic 4"></div>
+      </li>
+    </ul>
+
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+  </div>
+
   <div class="d-flex flex-column flex-md-row align-items-md-center pt-md-4 pt-3">
     <h2 class="mr-3">Rachada Hotel</h2>
     <div class="align-icons">
@@ -59,3 +81,15 @@ current: detail
   </div>
 
 </div>
+
+<script>
+  // Swiper
+  let swiper = new Swiper('#swiperPic', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>

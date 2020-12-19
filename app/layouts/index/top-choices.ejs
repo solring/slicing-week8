@@ -28,6 +28,24 @@
       reviews: "238",
       price: "1,980",
     },
+    {
+      name: "Celebrity Palace",
+      star: 4,
+      reviews: "586",
+      price: "1,980",
+    },
+    {
+      name: "Forever Palace",
+      star: 4,
+      reviews: "320",
+      price: "4,780",
+    },
+    {
+      name: "RR Space",
+      star: 4,
+      reviews: "238",
+      price: "2,090",
+    },
   ];
 
  %> 
@@ -47,19 +65,24 @@
     </li>
   </ul>
 
-  <ul class="row">
-  <% for (var i=0; i<hotels.length; i++) { %>
-    <li class="col-md-5 col-lg-3">
-      <a class="d-block text-dark" href="./detail.html">
-        <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- i+1 -%>.jpg" alt="hotel <%- i -%>">
-        <h5 class="my-2"><%- hotels[i].name -%></h5>
-        <span class="material-icons fz-grade">
-          <%- genStar(hotels[i].star) -%>
-        </span>
-        <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
-        <p class="text-secondary">TWD <%- hotels[i].price -%></p>
-      </a>
-    </li>
-  <% } %>
-  </ul>
+  <div id="swiperHotel" class="swiper-container w-100">
+    <ul class="swiper-wrapper">
+    <% for (var i=0; i<hotels.length; i++) { %>
+      <li class="swiper-slide">
+        <a class="d-block text-dark" href="./detail.html">
+          <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- (i%4)+1 -%>.jpg" alt="hotel <%- i -%>">
+          <h5 class="my-2"><%- hotels[i].name -%></h5>
+          <span class="material-icons fz-grade">
+            <%- genStar(hotels[i].star) -%>
+          </span>
+          <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
+          <p class="text-secondary">TWD <%- hotels[i].price -%></p>
+        </a>
+      </li>
+    <% } %>
+    </ul>
+
+    <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-30"></div>
+    <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-30"></div>
+  </div>
 </section>
