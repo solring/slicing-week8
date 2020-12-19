@@ -11,3 +11,12 @@
         padding: 4px 8px;
     }
 }
+
+.old-price {
+    text-decoration: line-through;
+    color: $secondary;
+    font-size: 16px;
+    @include media-breakpoint-down(md) {
+        font-size: 12px;
+    }
+}

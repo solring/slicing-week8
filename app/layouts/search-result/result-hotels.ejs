@@ -134,9 +134,7 @@
 
           <!-- Room Image -->
           <div class="col-5 col-md-4">
-            <div class="pic-fill-container">
-              <img class="card-img-left pic-height-sm" src="./assets/images/<%- results[i].img -%>" alt="hotel picture <%-i-%>" class="card-img">
-            </div>
+            <img class="card-img-left pic-height-sm" src="./assets/images/<%- results[i].img -%>" alt="hotel picture <%-i-%>" class="card-img">
           </div>
 
           <!-- Descriptions -->
@@ -163,7 +161,7 @@
               <!-- bottom-left -->
               <div class="col-md-7">
                 <h5 class="card-subtitle"><%- results[i].room -%></h5>
-                <p class="card-text mb-3">2 guests・1 bed (Queen size)</p>
+                <p class="card-text mb-2 mb-md-3">2 guests・1 bed (Queen size)</p>
                 <div class="d-none d-md-flex align-items-center flex-wrap">
                 <% for (var j=0; j<results[i].tags.length; j++) { %>
                   <div class="badge badge-info badge-pill"><%- tags[ results[i].tags[j] ] -%></div>
@@ -176,7 +174,7 @@
                 <div class="d-flex h-100 flex-column justify-content-end align-items-end">
                   <p class="card-text d-none d-md-block">per night</p>
                   <% if (results[i].oldPrice != undefined) { %>
-                    <p class="text-secondary text-crossout">TWD <%- results[i].oldPrice -%></p>
+                    <p class="old-price">TWD <%- results[i].oldPrice -%></p>
                     <h4 class="fz-hotel-title">TWD <span class="h6-md text-primary"><%- results[i].price -%></span></h4>
                   <% } else { %>
                     <h4 class="fz-hotel-title">TWD <%- results[i].price -%></h4>
