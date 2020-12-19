@@ -12,25 +12,20 @@
 }
 
 // ----- For content offset below header
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .header {
-    height: $header-height;
-    @include media-breakpoint-down(md) {
-        height: $header-height-sm;
-    }
+    position: sticky;
+    top: 0;
+    z-index: 1050;
 }
 
 .content {
-    margin-top: $header-height;
-    @include media-breakpoint-down(md) {
-        margin-top: $header-height-sm;
-    }
-}
-
-.content-lg {
-    margin-top: $header-height + $search-bar-height;
-    @include media-breakpoint-down(md) {
-        margin-top: $header-height-sm + $search-bar-height-sm;
-    }
+    flex: 1;
 }
 
 // ----- subscribe section -----

@@ -26,10 +26,12 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-<nav class="fixed-top">
 
-  <%- include('components/header') -%>
+<!-- Start of app -->
+<div class="app">
 
+<nav class="header">
+<%- include('components/header') -%>
 <% if ( current == "search-result") { %>
   <%- include('components/search-bar-lg', {options: ""}) -%>
 <% } else if ( current == "detail" ) { %>
@@ -37,11 +39,7 @@
 <% } %>
 </nav>
 
-<% if ( current == "search-result" || current == "detail") { %>
-<div class="content-lg">
-<% } else { %>
 <div class="content">
-<% } %>
 
 <% if (current == 'index') { %>
   <%- include('components/banner-search') -%>
@@ -71,12 +69,14 @@
 
 </div>
 
-
 <% if (current == 'booking' || current == 'confirmation') { %>
   <%- include('components/footer', { short: true }) -%>
 <% } else { %>
   <%- include('components/footer', { short: false }) -%>
 <% } %>
+
+</div>
+<!-- End of app -->
 
 <!-- AOS -->
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
