@@ -1,18 +1,15 @@
 .fullscreen-collapse {
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 1030;
+    z-index: 1060;
+}
 
+.fullscreen-collapse-wrapper {
     display: flex;
     flex-direction: column;
 
     width: 100vw;
     height: 100vh;
-    
-    &.collapsing {
-        position: fixed;
-    }
 }
 
 .fullscreen-header {
@@ -22,7 +19,7 @@
 
     flex: 0 0 auto;
 
-    padding: 16px;
+    padding: 10px 4px 10px 16px;
 }
 
 .fullscreen-content {
@@ -36,5 +33,6 @@
 .fullscreen-footer {
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 0;    
 }

@@ -84,7 +84,7 @@
         </div>
         <!-- room description -->
         <div class="col-6 room-card-desc">
-          <div class="card-body centering-vertical h-100">
+          <div class="p-2 centering-vertical h-100">
             <h6 class="mt-1"><%- rooms[i].name -%></h6>
             <p class="card-text mb-3">1 bed (Queen size)</p>
 
@@ -137,18 +137,21 @@
 </table>
 </div>
 
+<!-- Cart bottom modal -->
 <div id="cartCollapse" class="collapse bottom-modal fixed-bottom">
-  <div class="container d-flex justify-content-md-between flex-column flex-md-row">
-    <div>
-      <p class="small text-secondary">1 room・2 night</p>
-      <h4 class="mb-4">TWD 3,960</h4>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <button class="btn btn-outline-primary btn-lg text-uppercase" data-target="#cartCollapse" data-toggle="collapse">cencel</button>
+  <div class="bottom-modal-wrapper">
+    <div class="container d-flex justify-content-md-between flex-column flex-md-row">
+      <div>
+        <p class="small text-secondary">1 room・2 night</p>
+        <h4 class="mb-4">TWD 3,960</h4>
       </div>
-      <div class="col-6">
-        <button class="btn btn-primary btn-lg text-uppercase" data-target="#cartCollapse" data-toggle="collapse">reserve</button>
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-outline-primary btn-lg btn-block text-uppercase" data-target="#cartCollapse" data-toggle="collapse">cencel</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary btn-lg btn-block text-uppercase" data-target="#cartCollapse" data-toggle="collapse">reserve</button>
+        </div>
       </div>
     </div>
   </div>

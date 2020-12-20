@@ -127,8 +127,8 @@
  %> 
 
 <ul class="list-divider-info no-divider-down-sm">
-  <% for (var i = 0; i < results.length; i++) { %>
-    <li>
+<% for (var i = 0; i < results.length; i++) { %>
+  <li>
       <div class="card w-100 hover-shadow">
         <div class="row no-gutters">
 
@@ -145,7 +145,7 @@
               <div class="col-md-7">
                 <a href="#" class="card-text"><%- results[i].location -%></a>
                 <span class="card-text d-none d-lg-inline">・<%- results[i].distance -%>km from center</span>
-                <h4 class="card-title fz-hotel-title"><%- results[i].name -%></h4>
+                <h4 class="card-title fz-hotel-title"><a href="./detail.html"><%- results[i].name -%></a></h4>
               </div>
 
               <!-- top-right-->
@@ -164,7 +164,7 @@
                 <p class="card-text mb-2 mb-md-3">2 guests・1 bed (Queen size)</p>
                 <div class="d-none d-md-flex align-items-center flex-wrap">
                 <% for (var j=0; j<results[i].tags.length; j++) { %>
-                  <div class="badge badge-info badge-pill"><%- tags[ results[i].tags[j] ] -%></div>
+                  <div class="badge badge-info badge-pill mr-1 mb-1"><%- tags[ results[i].tags[j] ] -%></div>
                 <% } %>
                 </div>
               </div>
@@ -187,6 +187,6 @@
 
         </div>
       </div>
-    </li>
-  <% } %> 
+  </li>
+<% } %> 
 </ul>

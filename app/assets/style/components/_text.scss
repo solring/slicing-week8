@@ -26,6 +26,15 @@
     @include media-breakpoint-down(lg) {
         font-size: 16px;
     }
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+    }
+    a {
+        color: black;
+    }
+    a:hover {
+        color: $primary;
+    }
 }
 
 .p-sub {

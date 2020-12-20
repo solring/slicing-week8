@@ -68,7 +68,7 @@
     font-size: 12px;
 }
 
-.card-title, .card-subtitle {
+.card-subtitle {
     @include media-breakpoint-down(sm) {
         margin-bottom: 0;
     }
