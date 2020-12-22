@@ -14,7 +14,7 @@
     <ul class="navbar-nav">
       <div class="navbar-collapse collapse" id="navbarContent">
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownLang">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
             <span class="material-icons align-middle">language</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownLang">
@@ -23,13 +23,32 @@
             <li class="dropdown-item"><a href="#">日本語</a></li>
           </ul>
         </li>
+    <% if ( member != true ) { %>
         <li class="nav-item">
           <a href="sign-up.html" class="nav-link">Sign up</a>
         </li>
+    <% } %> 
       </div>
+    <% if ( member == true ) { %>
+      <li class="dropdown">
+        <a href="#" class="nav-link align-icons px-3" data-toggle="dropdown" role="button">
+          <img src="./assets/images/profile.jpg" alt="profile picture thumbnail" class="border border-primary thumbnail-sm rounded-circle">
+          <span class="d-none d-md-inline">David Lin</span>
+          <span class="material-icons p d-none d-md-inline">arrow_drop_down</span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMember">
+          <li class="dropdown-item"><a href="#">Account</a></li>
+          <li class="dropdown-item"><a href="#">My bookings</a></li>
+          <li class="dropdown-item"><a href="#">Privacy</a></li>
+          <li class="dropdown-item"><a href="#">Log out</a></li>
+        </ul>
+      </li>
+    <% } else { %> 
       <li class="nav-item">
         <a href="login.html" class="nav-link">Login</a>
       </li>
+    <% } %> 
+
     </ul>
 <% } %> 
   </div>

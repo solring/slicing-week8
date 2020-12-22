@@ -60,7 +60,7 @@ $pic-sizes-sm: (
     @include img-cover;
 }
 
-// card-height
+// ----- card-height -----
 $heights: (
     "sm": 175,
     "md": 265,
@@ -85,4 +85,17 @@ $heights-sm: (
             height: #{$h}px;
         }
     }
+}
+
+// thumbnail
+.thumbnail-sm {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.thumbnail {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
 }

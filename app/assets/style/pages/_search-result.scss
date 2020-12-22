@@ -1,4 +1,4 @@
-.card-img-left {
+.search-card-img {
     @include media-breakpoint-up(sm) {
         border-top-left-radius: $border-radius-lg;
         border-bottom-left-radius: $border-radius-lg;
@@ -9,6 +9,12 @@
     padding: 1rem;
     @include media-breakpoint-down(md) {
         padding: 4px 8px;
+    }
+}
+
+.card-rounded-0-sm {
+    @include media-breakpoint-down(sm) {
+        border-radius: 0;
     }
 }
 

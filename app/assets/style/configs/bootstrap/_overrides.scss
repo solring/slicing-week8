@@ -5,7 +5,7 @@
 }
 
 // ---- nav tags
-.navbar .nav-link {
+.nav-link {
     color: $dark;
     &:hover{
         color: $primary;
@@ -36,6 +36,14 @@
     }
 }
 
+// drop down
+.dropdown-menu a {
+    color: $dark;
+    &:hover{
+        color: $primary;
+    }
+}
+
 // ---- btn
 .btn {
     h1, h2, h3, h4, h5, h6, p{
@@ -47,10 +55,8 @@
 .card {
     border: none;
     border-radius: $border-radius-lg;
-    @include media-breakpoint-down(sm) {
-        border-radius: 0;
-    }
 }
+
 
 .card-body {
     padding: 24px;

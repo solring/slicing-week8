@@ -108,6 +108,9 @@
     span, img, .icon {
         vertical-align: middle;
     }
+    img {
+        display: inline-block;
+    }
     line-height: 100%;
 }
 

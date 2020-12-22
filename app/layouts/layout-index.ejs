@@ -40,7 +40,11 @@
 
 <!-- Start of header -->
 <nav class="header">
-<%- include('components/header', {simple: false}) -%>
+<% if ( current == "member") { %>
+  <%- include('components/header', {simple: false, member: true}) -%>
+<% } else { %>
+  <%- include('components/header', {simple: false, member: false}) -%>
+<% } %>
 <% if ( current == "search-result") { %>
   <%- include('components/search-bar-lg', {options: ""}) -%>
 <% } else if ( current == "detail" ) { %>
@@ -60,6 +64,10 @@
 
 <% if (current == "search-result") { %>
   <%- include('search-result/result') -%>
+<% } %>
+
+<% if (current == 'member') { %>
+  <%- include('member/member') -%>
 <% } %>
 
 <%- contents -%>

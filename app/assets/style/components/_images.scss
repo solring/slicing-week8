@@ -33,3 +33,11 @@ $cities: (
     background: center / cover no-repeat url("../images/login.jpg");
     z-index: 990;
 }
+
+// icons
+.icon-visa {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: center / cover no-repeat url("../images/cc-visa-brands.svg");
+}
