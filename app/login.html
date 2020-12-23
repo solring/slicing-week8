@@ -5,23 +5,17 @@ engine: ejs
 current: login
 ---
 <div class="container vh-100 position-relative login-page-content">
-  <div class="row h-100">
-    <div class="d-none d-md-block col-md-8 login-page-padding" style="overflow: visible;">
-      <!--
-      <img class="login-bg-img" src="./assets/images/login.jpg" alt="osaka">
-      -->
+  <div class="row h-100 justify-content-center">
+    <div class="d-none d-lg-block col-lg-8 login-page-padding" style="overflow: visible;">
       <div class="row position-relative">
         <div class="col-9">
           <h2 class="fz-title mb-3">An ideal hotel makes a wonderful Trip.</h2>
           <p class="p-sub text-secondary">Discover your dream destination and hotel on ALOHA.com</p>
         </div>
       </div>
-      <div class="bg-dark rounded px-3 py-2 text-light d-inline-block p-sub location-tag">
-        <span class="material-icons align-middle">place</span>Osaka Castel, Japan
-      </div>
     </div>
 
-    <div class="col-md-4 login-page-padding bg-light">
+    <div class="col-md-6 col-lg-4 login-page-padding login-page-right">
       <form action="./member.html" method="get">
 
         <h2 class="mb-3">Login</h2>
@@ -50,5 +44,8 @@ current: login
         </p>
       </form>
     </div>
+  </div>
+  <div class="bg-dark rounded px-3 py-2 text-light d-inline-block p-sub location-tag">
+    <span class="material-icons align-middle">place</span>Osaka Castel, Japan
   </div>
 </div>
