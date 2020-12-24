@@ -12,12 +12,12 @@
   ];
 %>
 
-<form class="search-bar bg-info rounded-lg" action="search-result.html" method="get">
+<form class="p-4 search-bar bg-info rounded-lg" action="search-result.html" method="get">
   <ul class="search-options flex-column flex-lg-row">
     <!-- Field Destination -->
     <li class="dropdown mb-3 mb-lg-0">
       <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
-        <span class="material-icons align-middle">location_on</span>
+        <span class="material-icons">location_on</span>
         Destination
       </button>
       <ul class="dropdown-menu list-unstyled w-100">
@@ -25,7 +25,7 @@
           <li class="dropdown-item">
             <a href="#" class="btn btn-link">
               <div class="d-flex">
-                <div class="material-icons align-middle">grade</div>
+                <div class="material-icons">grade</div>
                 <div>
                   <p><%- locations[i][0] -%></p>
                   <p class="small"><%- locations[i][1] -%></p>
@@ -40,7 +40,7 @@
     <!-- Field Calendar -->
     <li class="mb-3 mb-lg-0">
       <button id="searchDatePicker" class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown">
-        <span class="material-icons align-middle">date_range</span>
+        <span class="material-icons">date_range</span>
         Check-in / Check-out
       </button>
     </li>
@@ -49,7 +49,7 @@
     <!-- Field Guests -->
     <li class="dropdown mb-3 mb-lg-0">
       <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
-        <span class="material-icons align-middle">person</span>
+        <span class="material-icons">person</span>
         Guests
       </button>
       <ul class="dropdown-menu list-unstyled w-100">

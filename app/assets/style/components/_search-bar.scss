@@ -4,7 +4,6 @@
     position: relative; // to enable offset
     z-index: 100;
 
-    padding: 1.5rem;
     @include media-breakpoint-down(sm) {
         padding: 1rem;
     }
@@ -28,6 +27,9 @@
                 @include media-breakpoint-down(lg) {
                     padding: 1rem .5rem;
                 }
+            }
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
@@ -55,6 +57,9 @@
                     font-size: 12px;
                     background: $info;
                 }
+            }
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

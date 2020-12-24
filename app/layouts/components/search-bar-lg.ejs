@@ -12,18 +12,18 @@
   ];
 %>
 
-<div class="bg-info">
+<div class="bg-info text-center">
 <% if ( options == "with-return-btn") {  %> 
 <a href="./search-result.html" class="d-md-none btn container py-3 px-3">
-  <span class="material-icons align-middle text-dark">arrow_back</span>
+  <span class="material-icons text-dark">arrow_back</span>
   <span class="text-secondary small">Bangkok・17 June - 19 June・2 adults・1 room</span>
 </a>
 <% } %>
 
 <% if ( options == "with-return-btn") {  %> 
-<form class="search-bar container px-md-0 d-none d-md-block" action="search-result.html" method="get">
+<form class="py-4 search-bar container d-none d-md-block" action="search-result.html" method="get">
 <% } else { %>
-<form class="search-bar container px-md-0" action="search-result.html" method="get">
+<form class="py-4 search-bar container" action="search-result.html" method="get">
 <% } %>
   <ul class="search-options search-collapse-sm">
     <!-- Field Destination -->
@@ -48,7 +48,7 @@
           <li class="dropdown-item">
             <a href="#" class="d-block">
               <div class="d-flex">
-                <div class="material-icons align-middle">grade</div>
+                <div class="material-icons">grade</div>
                 <div>
                   <p><%- locations[i][0] -%></p>
                   <p class="small"><%- locations[i][1] -%></p>

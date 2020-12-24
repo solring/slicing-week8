@@ -4,9 +4,9 @@
     res += "<ul class=\"list-gap-8\">"
 
     for (var i = 0; i<sec.options.length; i++) {
-      let substr = "<li class=\"form-check\"> \
-                <input type=\"checkbox\" class=\"form-check-input\" id=\"" + sec.options[i].name + "Check\" name=\"" + sec.options[i].name + "\"> \
-                <label for=\"" + sec.options[i].name + "Check\" class=\"form-check-label text-secondary\">" + sec.options[i].text + "</label> \
+      let substr = "<li class=\"custom-control custom-checkbox\"> \
+                <input type=\"checkbox\" class=\"custom-control-input\" id=\"" + sec.options[i].name + "Check\" name=\"" + sec.options[i].name + "\"> \
+                <label for=\"" + sec.options[i].name + "Check\" class=\"custom-control-label text-secondary\">" + sec.options[i].text + "</label> \
               </li>";
       res += substr;
     }
@@ -74,7 +74,7 @@
   ]
 %>
 
-<form target="#" method="get">
+<form target="#" method="get" class="filter">
 
   <ul class="list-divider-white">
     <li>
@@ -111,10 +111,10 @@
     <li>
       <h6 class="card-title">Rating</h6>
     <% for (var i=5; i>0; i--) { %> 
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="rate<%- i -%>Check" name="rate<%- i -%>">
-        <label for="rate<%- i -%>Check" class="form-check-label">
-          <span class="material-icons align-middle">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="rate<%- i -%>Check" name="rate<%- i -%>">
+        <label for="rate<%- i -%>Check" class="custom-control-label">
+          <span class="material-icons">
           <% for (var j=0; j<i; j++) { %>
             grade
           <% } %> 
@@ -123,9 +123,9 @@
         </label>
       </div>
     <% } %>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="unrateCheck" name="unrate">
-        <label for="unrateCheck" class="form-check-label text-secondary">Unrated</label>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="unrateCheck" name="unrate">
+        <label for="unrateCheck" class="custom-control-label text-secondary">Unrated</label>
       </div>
     </li>
     <li>

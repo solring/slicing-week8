@@ -3,6 +3,9 @@
     @include media-breakpoint-down(lg) {
         width: 100%;
     }
+    @include media-breakpoint-down(xs) {
+        display: none;
+    }
 }
 
 .login-page-padding {
