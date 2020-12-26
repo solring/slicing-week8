@@ -16,12 +16,12 @@
 
 @mixin list-w-divider($pad, $color, $lwidth: 1px, $row: false) {
     @if ($row) {
-        
+
         &>li, th, td {
             padding-right: $pad;
             border-right: $lwidth solid $color;
             margin-right: $pad;
-    
+
             &:last-child {
                 padding-right: 0;
                 margin-right: 0;
@@ -33,7 +33,7 @@
             padding-bottom: $pad;
             border-bottom: $lwidth solid $color;
             margin-bottom: $pad;
-    
+
             &:last-child {
                 padding-bottom: 0;
                 margin-bottom: 0;
@@ -41,7 +41,7 @@
             }
         }
     }
-    
+
 }
 
 @mixin list-gap($gap: 0) {
@@ -60,7 +60,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    $ratio: ($total - $n * $gap) / ($n * $total); 
+    $ratio: ($total - $n * $gap) / ($n * $total);
     $width : unquote( $ratio * 100 + '%' );
     &>li {
         @if $n == 1 {

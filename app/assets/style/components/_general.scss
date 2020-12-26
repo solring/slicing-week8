@@ -5,6 +5,7 @@
     img {
         object-fit: cover;
         height: 320px;
+        filter: brightness(75%);
         @include media-breakpoint-down(sm) {
             height: 315px;
         }
@@ -53,7 +54,7 @@
     @include media-breakpoint-down(sm) {
         font-size: 22px;
         line-height: 24px;
-    } 
+    }
 }
 
 // ----- block display badge -----
@@ -69,6 +70,10 @@
 }
 
 // ----- icon size -----
-.icon-lg {
+.icon-md {
     font-size: 20px;
+}
+
+.icon-lg {
+    font-size: 24px;
 }

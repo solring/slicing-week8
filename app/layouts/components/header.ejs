@@ -1,23 +1,23 @@
 <% if ( simple == true) { %>
-<div class="navbar navbar-expand-sm">
+<div class="navbar navbar-expand-md">
 <% } else { %>
-<div class="navbar navbar-expand-sm bg-light">
-<% } %> 
+<div class="navbar navbar-expand-md bg-light">
+<% } %>
   <div class="container justify-content-between">
   <% if ( simple != true) { %>
     <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="material-icons">menu</span>
     </button>
-  <% } %> 
+  <% } %>
 
     <h1 class="navbar-brand logo"><a href="index.html">ALOHA</a></h1>
-    
+
 <% if ( simple != true) { %>
     <ul class="navbar-nav">
       <div class="navbar-collapse collapse" id="navbarContent">
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
-            <span class="material-icons icon-lg">language</span>
+            <span class="material-icons icon-md">language</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownLang">
             <li class="dropdown-item"><a href="#">English</a></li>
@@ -29,7 +29,7 @@
         <li class="nav-item ml-4">
           <a href="sign-up.html" class="nav-link">Sign up</a>
         </li>
-    <% } %> 
+    <% } %>
       </div>
     <% if ( member == true ) { %>
       <li class="nav-item dropdown ml-4">
@@ -45,13 +45,13 @@
           <li class="dropdown-item"><a href="#">Log out</a></li>
         </ul>
       </li>
-    <% } else { %> 
+    <% } else { %>
       <li class="nav-item ml-4">
         <a href="login.html" class="nav-link">Login</a>
       </li>
-    <% } %> 
+    <% } %>
 
     </ul>
-<% } %> 
+<% } %>
   </div>
 </div>
