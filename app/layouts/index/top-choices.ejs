@@ -9,45 +9,113 @@
       star: 5,
       reviews: "2k",
       price: "2,480",
+      pic: 1,
     },
     {
       name: "Mr. Kawasaki Inn",
       star: 4,
       reviews: "500",
       price: "3,380",
+      pic: 2,
     },
     {
       name: "Weekly Paradise",
       star: 4,
       reviews: "470",
       price: "4,780",
+      pic: 3,
     },
     {
       name: "Beast Hotel",
       star: 4,
       reviews: "238",
       price: "1,980",
+      pic: 4,
     },
     {
       name: "Celebrity Palace",
       star: 4,
       reviews: "586",
       price: "1,980",
+      pic: 3,
     },
     {
       name: "Forever Palace",
       star: 4,
       reviews: "320",
       price: "4,780",
+      pic: 2,
     },
     {
       name: "RR Space",
       star: 4,
       reviews: "238",
       price: "2,090",
+      pic: 1,
     },
   ];
 
+  hotels_okinawa = [
+    {
+      name: "Indigo Hotel",
+      star: 4,
+      reviews: "238",
+      price: "2,980",
+      pic: 3,
+    },
+    {
+      name: "Celebrity Palace",
+      star: 4,
+      reviews: "586",
+      price: "1,980",
+      pic: 2,
+    },
+    {
+      name: "Forever Palace",
+      star: 4,
+      reviews: "320",
+      price: "4,780",
+      pic: 4,
+    },
+    {
+      name: "RR Space",
+      star: 4,
+      reviews: "238",
+      price: "2,090",
+      pic: 1,
+    }, 
+  ];
+  
+  hotels_taipei = [
+    {
+      name: "Weekly Paradise",
+      star: 4,
+      reviews: "470",
+      price: "4,780",
+      pic: 4,
+    },
+    {
+      name: "Hotel Aqua",
+      star: 5,
+      reviews: "2k",
+      price: "2,480",
+      pic: 1,
+    },
+    {
+      name: "Mr. Kawasaki Inn",
+      star: 4,
+      reviews: "500",
+      price: "3,380",
+      pic: 2,
+    },
+  ];
+  groups = [
+    hotels, hotels_okinawa, hotels_taipei
+  ];
+
+  locations = [
+    "Bali", "Okinawa", "Taipei"
+  ];
  %> 
  
 <section class="container">
@@ -55,34 +123,47 @@
 
   <ul class="nav nav-tags mb-4">
     <li class="nav-item">
-      <a class="nav-link active" href="#Bali"><h4>Bali<span class="notation">128</span></h4></a>
+      <a class="nav-link active" href="#Bali" data-toggle="tab"><h4>Bali<span class="notation">128</span></h4></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#Okinawa"><h4>Okinawa<span class="notation">67</span></h4></a>
+      <a class="nav-link" href="#Okinawa" data-toggle="tab"><h4>Okinawa<span class="notation">67</span></h4></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#Taipei"><h4>Taipei<span class="notation">53</span></h4></a>
+        <a class="nav-link" href="#Taipei" data-toggle="tab"><h4>Taipei<span class="notation">53</span></h4></a>
     </li>
   </ul>
 
-  <div id="swiperHotel" class="swiper-container w-100">
-    <ul class="swiper-wrapper">
-    <% for (var i=0; i<hotels.length; i++) { %>
-      <li class="swiper-slide">
-        <a class="d-block text-dark" href="./detail.html">
-          <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- (i%4)+1 -%>.jpg" alt="hotel <%- i -%>">
-          <h5 class="my-2"><%- hotels[i].name -%></h5>
-          <span class="material-icons fz-grade">
-            <%- genStar(hotels[i].star) -%>
-          </span>
-          <%- hotels[i].star -%>.0<span class="text-muted small">・<%- hotels[i].reviews -%> reviews</span>
-          <p class="text-secondary">TWD <%- hotels[i].price -%></p>
-        </a>
-      </li>
-    <% } %>
-    </ul>
 
-    <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-30"></div>
-    <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-30"></div>
+  <div class="tab-content">
+  <% for (var j=0; j<groups.length; j++) { %> 
+    <% if (j==0) { %> 
+    <div id="<%- locations[j] -%>" class="tab-pane fade active show">
+    <% } else { %>
+    <div id="<%- locations[j] -%>" class="tab-pane fade">
+    <% } %> 
+      
+      <div id="swiper<%- locations[j] -%>" class="swiper-container w-100">
+        <ul class="swiper-wrapper">
+        <% for (var i=0; i<groups[j].length; i++) { %>
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top<%- groups[j][i].pic -%>.jpg" alt="hotel <%- i -%>">
+              <h5 class="my-2"><%- groups[j][i].name -%></h5>
+              <span class="material-icons fz-grade">
+                <%- genStar(groups[j][i].star) -%>
+              </span>
+              <%- groups[j][i].star -%>.0<span class="text-muted small">・<%- groups[j][i].reviews -%> reviews</span>
+              <p class="text-secondary">TWD <%- groups[j][i].price -%></p>
+            </a>
+          </li>
+        <% } %>
+        </ul>
+
+        <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-30"></div>
+        <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-30"></div>
+      </div>
+
+    </div>
+  <% } %>
   </div>
 </section>

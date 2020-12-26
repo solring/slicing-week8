@@ -26,13 +26,13 @@
           </ul>
         </li>
     <% if ( member != true ) { %>
-        <li class="nav-item">
+        <li class="nav-item ml-4">
           <a href="sign-up.html" class="nav-link">Sign up</a>
         </li>
     <% } %> 
       </div>
     <% if ( member == true ) { %>
-      <li class="dropdown">
+      <li class="nav-item dropdown ml-4">
         <a href="#" class="nav-link align-icons px-3" data-toggle="dropdown" role="button">
           <img src="./assets/images/profile.jpg" alt="profile picture thumbnail" class="border border-primary thumbnail-sm rounded-circle">
           <span class="d-none d-md-inline">David Lin</span>
@@ -46,7 +46,7 @@
         </ul>
       </li>
     <% } else { %> 
-      <li class="nav-item">
+      <li class="nav-item ml-4">
         <a href="login.html" class="nav-link">Login</a>
       </li>
     <% } %> 

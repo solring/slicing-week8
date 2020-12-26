@@ -34,22 +34,36 @@ current: index
 
 <script>
   // Swiper
-  let swiper1 = new Swiper('#swiperHotel', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: '#swiperHotelNext',
-      prevEl: '#swiperHotelPrev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 30,
+  let locations = [
+    "Bali", "Okinawa", "Taipei"
+  ];
+  let swipers = [];
+
+  locations.forEach( (l) => {
+    let swiper = new Swiper('#swiper' + l, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '#swiperHotelNext',
+        prevEl: '#swiperHotelPrev',
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
       }
-    }
+    });
+    swipers.push(swiper);
   });
 
-  let swiper2 = new Swiper('#swiperBlog', {
+  let swiperBlog = new Swiper('#swiperBlog', {
     slidesPerView: 1.5,
     spaceBetween: 30,
     breakpoints: {
@@ -59,6 +73,9 @@ current: index
       }
     }
   });
+
+  //$("#resultsTab. tab-pane").removeClass("show active");
+  //$("#resultsTab. tab-pane").first().addClass("show active");
 </script>
 
 

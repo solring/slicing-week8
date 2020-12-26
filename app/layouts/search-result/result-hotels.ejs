@@ -124,10 +124,29 @@
       tags: [],
     },
   ];
+
+  groups = [
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [7, 4, 5, 3, 8, 1],
+    [9, 0, 3, 6],
+    [3, 10, 2],
+  ];
  %> 
+
+<!-- Start of tab-contents -->
+<div class="tab-content" id="resultsTab">
+<% for (var k=0; k < groups.length; k++) { %>
+  <!-- Start of tab-pane -->
+  <% if (k==0) { %> 
+  <div class="tab-pane fade show active" id="pane<%- k -%>" role="tabpanel" aria-labelledby="tab<%- k -%>">
+  <% } else { %>
+  <div class="tab-pane fade" id="pane<%- k -%>" role="tabpanel" aria-labelledby="tab<%- k -%>">
+  <% } %>
 
 <ul class="list-divider-info no-divider-down-sm">
 <% for (var i = 0; i < results.length; i++) { %>
+  <% if (groups[k].indexOf(i) != -1) { %>
+
   <li>
       <a href="./detail.html" class="d-block text-dark card card-rounded-0-sm w-100 hover-shadow">
         <div class="row no-gutters">
@@ -190,5 +209,10 @@
         </div>
       </a>
   </li>
+  <% } %> 
 <% } %> 
 </ul>
+
+  </div> <!-- End of tab-pane -->
+<% } %> 
+</div> <!-- End of tab-contents -->
