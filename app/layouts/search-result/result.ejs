@@ -1,5 +1,5 @@
 
-<div class="container pt-4">
+<div class="container px-0 px-md-3 pt-4">
 
   <!-- Title & navbar -->
   <div class="row align-items-basline mb-3">
@@ -25,18 +25,26 @@
     </div>
   </div>
 
-  <!-- Filter btn groups -->
+  <!-- Filter btn groups: only shown for phone -->
   <div class="d-md-none">
-    <ul class="d-flex align-items-center justify-content-center w-100 list-row-divider-info">
-      <li>
-        <a href="#filterCollapse" class="btn btn-link btn-block" data-toggle="collapse" >
+    <ul class="d-flex align-items-center justify-content-center w-100 list-row-divider-info mb-3">
+      <li class="flex-fill">
+        <a href="#filterCollapse" class="btn btn-link btn-block font-weight-bold text-dark text-sub" data-toggle="collapse" >
           <span class="material-icons">filter_list</span> FILTER
         </a>
       </li>
-      <li>
-        <a href="#" class="btn btn-link btn-block">
-          <span class="material-icons">sort</span> SORT
-        </a>
+      <li class="flex-fill">
+        <div class="dropdown">
+          <a href="#" class="btn btn-link btn-block font-weight-bold text-dark text-sub" data-toggle="dropdown">
+            <span class="material-icons">sort</span> SORT
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right bg-info border-0">
+            <li class="dropdown-item active"><a href="#pane0" data-toggle="tab" class="font-weight-bold">Recommended</a></li>
+            <li class="dropdown-item"><a href="#pane1" data-toggle="tab" class="font-weight-bold">Lowest Price</a></li>
+            <li class="dropdown-item"><a href="#pane2" data-toggle="tab" class="font-weight-bold">Best value</a></li>
+            <li class="dropdown-item"><a href="#pane3" data-toggle="tab" class="font-weight-bold">Distance to City Center</a></li>
+          </ul>
+        </div>
       </li>
     </ul>
   </div>
@@ -44,7 +52,7 @@
   <div class="row">
 
     <!-- Filter navbar -->
-    <div class="col-md-4 d-none d-md-block">
+    <div class="col-md-4 d-none d-md-block mb-4">
       <nav class="card bg-info border-0">
         <div class="card-body">
           <%- include('./filter') -%> 

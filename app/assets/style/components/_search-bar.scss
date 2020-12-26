@@ -24,7 +24,7 @@
             }
             .btn-light {
                 padding: 1rem;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(md) {
                     padding: 1rem .5rem;
                 }
             }
@@ -46,7 +46,7 @@
             }
             .btn {
                 @include media-breakpoint-down(sm) {
-                    padding: 0;
+                    padding: 8px 0;
                 }
             }
 
@@ -60,6 +60,11 @@
             }
             &:last-child {
                 margin-right: 0;
+            }
+            &:nth-last-child(2) {
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
             }
         }
     }

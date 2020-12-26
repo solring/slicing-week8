@@ -83,9 +83,9 @@
       reviews: "238",
       price: "2,090",
       pic: 1,
-    }, 
+    },
   ];
-  
+
   hotels_taipei = [
     {
       name: "Weekly Paradise",
@@ -116,8 +116,8 @@
   locations = [
     "Bali", "Okinawa", "Taipei"
   ];
- %> 
- 
+ %>
+
 <section class="container">
   <h3 class="mb-4">Top Choices</h3>
 
@@ -129,19 +129,19 @@
       <a class="nav-link" href="#Okinawa" data-toggle="tab"><h4>Okinawa<span class="notation">67</span></h4></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#Taipei" data-toggle="tab"><h4>Taipei<span class="notation">53</span></h4></a>
+      <a class="nav-link" href="#Taipei" data-toggle="tab"><h4>Taipei<span class="notation">53</span></h4></a>
     </li>
   </ul>
 
 
   <div class="tab-content">
-  <% for (var j=0; j<groups.length; j++) { %> 
-    <% if (j==0) { %> 
+  <% for (var j=0; j<groups.length; j++) { %>
+    <% if (j==0) { %>
     <div id="<%- locations[j] -%>" class="tab-pane fade active show">
     <% } else { %>
     <div id="<%- locations[j] -%>" class="tab-pane fade">
-    <% } %> 
-      
+    <% } %>
+
       <div id="swiper<%- locations[j] -%>" class="swiper-container w-100">
         <ul class="swiper-wrapper">
         <% for (var i=0; i<groups[j].length; i++) { %>

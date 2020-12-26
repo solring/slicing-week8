@@ -36,10 +36,18 @@
     }
 }
 
-// drop down
+// ---- drop down
 .dropdown-menu a {
     color: $dark;
     &:hover{
+        color: $primary;
+    }
+}
+
+.dropdown-item.active {
+    background: none;
+    color: $primary;
+    a {
         color: $primary;
     }
 }
