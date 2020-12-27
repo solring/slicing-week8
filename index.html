@@ -91,7 +91,7 @@
 <div class="content">
 
 
-  <div id="carouselMain" class="banner carousel slide" data-ride="carousel">
+  <div id="carouselMain" class="banner carousel slide" data-ride="carousel" data-aos="fade-in" data-aos-delay="800">
   <ul class="carousel-inner">
     <li class="carousel-item active">
       <img src="assets/images/index-banner.jpg" class="w-100" alt="carousel 1">
@@ -125,7 +125,7 @@
 </div>
 
 <!-- Search Bar -->
-<div class="container-custom-md">
+<div class="container-custom-md" data-aos="fade-up"  data-aos-delay="1000">
 
 
 <form class="p-4 search-bar bg-info rounded-lg" action="search-result.html" method="get">
@@ -472,7 +472,38 @@
     </div>
   
   </div>
-</section>  
+</section>
+
+<script>
+  let locations = [
+    "Bali", "Okinawa", "Taipei"
+  ];
+  let swipers = [];
+
+  locations.forEach( (l) => {
+  let swiper = new Swiper('#swiper' + l, {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '#swiperHotelNext',
+      prevEl: '#swiperHotelPrev',
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+      },
+    }
+  });
+  swipers.push(swiper);
+});
+</script>  
 <section class="container">
   <h3 class="mb-4">Popular Destinations</h3>
   <ul class="row">
@@ -585,36 +616,6 @@
 </section>
 
 <script>
-  // Swiper
-  let locations = [
-    "Bali", "Okinawa", "Taipei"
-  ];
-  let swipers = [];
-
-  locations.forEach( (l) => {
-    let swiper = new Swiper('#swiper' + l, {
-      observer: true,
-      observeParents: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '#swiperHotelNext',
-        prevEl: '#swiperHotelPrev',
-      },
-      breakpoints: {
-        992: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 30,
-        },
-      }
-    });
-    swipers.push(swiper);
-  });
-
   let swiperBlog = new Swiper('#swiperBlog', {
     slidesPerView: 1.5,
     spaceBetween: 30,
@@ -634,7 +635,7 @@
 
 
 
-  <section class="subscribe-lg bg-info">
+  <section class="subscribe-lg bg-info" data-aos="fade-up">
   <div class="container d-flex flex-column justify-content-center align-items-center">
     <h2 class="fz-title mb-md-4 mb-3">Subscribe for Exclusive Offer</h2>
     <form action="#" class="input-group input-group-lg w-md-50" method="post">
