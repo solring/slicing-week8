@@ -91,7 +91,7 @@
 <div class="content">
 
 
-  <div id="carouselMain" class="banner carousel slide" data-ride="carousel" data-aos="fade-in" data-aos-delay="800">
+  <div id="carouselMain" class="banner carousel slide" data-ride="carousel" data-aos="fade-in">
   <ul class="carousel-inner">
     <li class="carousel-item active">
       <img src="assets/images/index-banner.jpg" class="w-100" alt="carousel 1">
@@ -125,7 +125,7 @@
 </div>
 
 <!-- Search Bar -->
-<div class="container-custom-md" data-aos="fade-up"  data-aos-delay="1000">
+<div class="container-custom-md" data-aos="fade-up"  data-aos-delay="200">
 
 
 <form class="p-4 search-bar bg-info rounded-lg" action="search-result.html" method="get">
@@ -720,6 +720,7 @@
   AOS.init({
     delay: 0,
     duration: 800,
+    disable: 'phone',
     once: true,
     offset: 150,
   });
