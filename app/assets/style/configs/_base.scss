@@ -19,11 +19,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0;
 }
 
+// RWD font sizes
 @include media-breakpoint-down(md) {
-    h2 {
+    h2:not(.fixed-size), h3:not(.fixed-size) {
         font-size: 24px;
     }
-    h4 {
+    h4:not(.fixed-size) {
         font-size: 20px;
     }
 }

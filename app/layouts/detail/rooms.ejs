@@ -43,7 +43,7 @@
     },
     {
       name: "Deluxe Double Room B",
-      price: "1,600", 
+      price: "1,600",
       img: "roomB.jpg",
       tags: [0,1,2,3,4,6],
     },
@@ -95,12 +95,12 @@
                 <span class="material-icons"><%- tags[rooms[i].tags[j]].icon -%></span>
                 <span class="d-none d-lg-inline"><%- tags[rooms[i].tags[j]].name -%></span>
               </li>
-            <% } %> 
+            <% } %>
             </ul>
             <div class="d-block d-md-none">
               <span class="material-icons">person</span><span class="material-icons">person</span>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
           <%- include('../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
           </div>
           <div class="col-6 centering-vertical text-right">
-            <%- genPrices(rooms[i].price, rooms[i].oldPrice) -%> 
+            <%- genPrices(rooms[i].price, rooms[i].oldPrice) -%>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
     </td>
     <td class="d-none d-md-flex col-md-2 centering-total">
       <div class="text-center">
-        <%- genPrices(rooms[i].price, rooms[i].oldPrice) -%> 
+        <%- genPrices(rooms[i].price, rooms[i].oldPrice) -%>
         <p class="card-text">per night</p>
       </div>
     </td>
@@ -133,7 +133,7 @@
       <%- include('../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
     </td>
   </tr>
-  <% } %> 
+  <% } %>
 </table>
 </div>
 
@@ -150,7 +150,7 @@
           <button class="btn btn-outline-primary btn-lg btn-block text-uppercase" data-target="#cartCollapse" data-toggle="collapse">cencel</button>
         </div>
         <div class="col-6">
-          <button class="btn btn-primary btn-lg btn-block text-uppercase" data-target="#cartCollapse" data-toggle="collapse">reserve</button>
+          <a href="./reservation.html" class="btn btn-primary btn-lg btn-block text-uppercase">reserve</a>
         </div>
       </div>
     </div>
