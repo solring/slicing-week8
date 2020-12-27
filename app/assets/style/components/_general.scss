@@ -1,7 +1,8 @@
-// ----- banner ------
+// ========================================================
+// Carousel banner
+// ========================================================
 .banner {
     margin-bottom: -52px; // search bar offset
-
     img {
         object-fit: cover;
         height: 320px;
@@ -12,7 +13,10 @@
     }
 }
 
-// ----- For content offset below header
+// ========================================================
+// Page layout
+// For content offset below header
+// ========================================================
 .app {
     display: flex;
     flex-direction: column;
@@ -29,35 +33,10 @@
     flex: 1;
 }
 
-// ----- subscribe section -----
-.subscribe-lg {
-    padding: 92px 0;
-    @include media-breakpoint-down(sm) {
-        padding: 24px 0;
-        h2 {
-            font-size: 22px;
-            line-height: 24px;
-        }
-    }
-    .input-group {
-        width: 100%;
-        @include media-breakpoint-up(md) {
-            width: 570px;
-        }
-        @include media-breakpoint-up(lg) {
-            width: 50%;
-        }
-    }
-}
 
-.subscribe h2 {
-    @include media-breakpoint-down(sm) {
-        font-size: 22px;
-        line-height: 24px;
-    }
-}
-
-// ----- block display badge -----
+// ========================================================
+// block display badge
+// ========================================================
 .div-badge {
     padding: 8px 16px;
     border-radius: 4px;
@@ -69,7 +48,9 @@
     }
 }
 
-// ----- icon size -----
+// ========================================================
+// Icon sizes
+// ========================================================
 .icon-md {
     font-size: 20px;
 }
