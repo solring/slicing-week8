@@ -108,7 +108,7 @@
       <div class="card-footer px-2 py-2 d-md-none border-0 bg-info">
         <div class="row no-gutters">
           <div class="col-6 centering-vertical my-2" data-toggle="collapse">
-          <%- include('../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
+          <%- include('../../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
           </div>
           <div class="col-6 centering-vertical text-right">
             <%- genPrices(rooms[i].price, rooms[i].oldPrice) -%>
@@ -130,7 +130,7 @@
       </div>
     </td>
     <td class="d-none d-md-flex col-md-2 centering-total">
-      <%- include('../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
+      <%- include('../../components/number-picker', {number: 0, href: "#cartCollapse", options: "data-toggle=\"collapse\""}) -%>
     </td>
   </tr>
   <% } %>

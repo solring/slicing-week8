@@ -4,6 +4,16 @@
     transform: translateY(50%);
 }
 
+// ---- navbar
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include media-breakpoint-down(sm) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
 // ---- nav tags
 .nav-link {
     color: $dark;

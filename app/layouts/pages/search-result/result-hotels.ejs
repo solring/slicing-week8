@@ -9,7 +9,7 @@
   ];
   results = [
     {
-      img: 'Rachada1.jpg',
+      imgs: ['Rachada1.jpg', 'Rachada2.jpg', 'Rachada3.jpg', 'Rachada4.jpg'],
       name: "Rachada Hotel",
       star: 4,
       reviews: 283,
@@ -20,7 +20,7 @@
       tags: [0, 1],
     },
     {
-      img: 'Phaya.jpg',
+      imgs: ['Phaya.jpg'],
       name: "Forever Place",
       star: 5,
       reviews: 121,
@@ -32,7 +32,7 @@
       tags: [0],
     },
     {
-      img: 'Bangkapi.jpg',
+      imgs: ['Bangkapi.jpg'],
       name: "LUV Hotel",
       star: 4,
       reviews: 325,
@@ -43,7 +43,7 @@
       tags: [0],
     },
     {
-      img: 'Chatuchack1.jpg',
+      imgs: ['Chatuchack1.jpg', 'Chatuchack2.jpg'],
       name: "WOW Life Hotel",
       star: 4,
       reviews: 204,
@@ -55,7 +55,7 @@
       tags: [1],
     },
     {
-      img: 'Chatuchack2.jpg',
+      imgs: ['Chatuchack2.jpg'],
       name: "Celebrity Palace",
       star: 5,
       reviews: 189,
@@ -67,7 +67,7 @@
       tags: [1],
     },
     {
-      img: 'RangRak.jpg',
+      imgs: ['RangRak.jpg'],
       name: "RR Space",
       star: 4,
       reviews: 102,
@@ -78,7 +78,7 @@
       tags: [0],
     },
     {
-      img: 'Watana1.jpg',
+      imgs: ['Watana1.jpg'],
       name: "Bangkok Hostel",
       star: 5,
       reviews: 112,
@@ -89,7 +89,7 @@
       tags: [0, 1],
     },
     {
-      img: 'Watana2.jpg',
+      imgs: ['Watana2.jpg'],
       name: "Watana First Hostel",
       star: 3,
       reviews: 608,
@@ -101,7 +101,7 @@
       tags: [0],
     },
     {
-      img: 'DinDaeng1.jpg',
+      imgs: ['DinDaeng1.jpg'],
       name: "DD Space",
       star: 4,
       reviews: 138,
@@ -113,7 +113,7 @@
       tags: [],
     },
     {
-      img: 'DinDaeng2.jpg',
+      imgs: ['DinDaeng2.jpg'],
       name: "Dininn Hotel",
       star: 3,
       reviews: 446,
@@ -131,13 +131,13 @@
     [9, 0, 3, 6],
     [3, 10, 2],
   ];
- %> 
+ %>
 
 <!-- Start of tab-contents -->
 <div class="tab-content" id="resultsTab">
 <% for (var k=0; k < groups.length; k++) { %>
   <!-- Start of tab-pane -->
-  <% if (k==0) { %> 
+  <% if (k==0) { %>
   <div class="tab-pane fade show active" id="pane<%- k -%>" role="tabpanel" aria-labelledby="tab<%- k -%>">
   <% } else { %>
   <div class="tab-pane fade" id="pane<%- k -%>" role="tabpanel" aria-labelledby="tab<%- k -%>">
@@ -153,7 +153,21 @@
 
           <!-- Room Image -->
           <div class="col-5 col-md-4">
-            <img class="search-card-img pic-height-sm" src="./assets/images/<%- results[i].img -%>" alt="hotel picture <%-i-%>" class="card-img">
+          <% if (results[i].imgs.length > 1) { %>
+            <div class="swiper-container nav-show-hover">
+              <ul class="swiper-wrapper">
+              <% for( let idx = 0; idx < results[i].imgs.length; idx++ ) { %>
+                <li class="swiper-slide">
+                  <img class="search-card-img pic-height-sm" src="./assets/images/<%- results[i].imgs[idx] -%>" alt="hotel picture <%-i-%>">
+                </li>
+              <% } %>
+              </ul>
+              <div class="swiper-button-prev swiper-button-round"></div>
+              <div class="swiper-button-next swiper-button-round"></div>
+            </div>
+          <% } else { %>
+            <img class="search-card-img pic-height-sm" src="./assets/images/<%- results[i].imgs[0] -%>" alt="hotel picture <%-i-%>">
+          <% } %>
           </div>
 
           <!-- Descriptions -->
@@ -202,17 +216,28 @@
                   <% } %>
                 </div>
               </div>
-              
+
             </div>
           </div>
 
         </div>
       </a>
   </li>
-  <% } %> 
-<% } %> 
+  <% } %>
+<% } %>
 </ul>
 
   </div> <!-- End of tab-pane -->
-<% } %> 
+<% } %>
 </div> <!-- End of tab-contents -->
+
+<script>
+  let swipers = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+  })
+</script>
