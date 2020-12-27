@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOHA Travel</title>
+
+  <!-- Materiel Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Lightpicker Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/style.css"/>
+  <!-- JQ Styles -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- Swiper styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/components/navigation/navigation.min.css">
+  <!-- General Styles -->
+  <link rel="stylesheet" href="assets/style/all.css">
+
+  <!-- Lightpicker -->
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.nocss.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Jquery UI -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+<!-- Start of app -->
+<div class="app">
+
+<!-- Start of header -->
+<nav class="header">
+
+  
+<div class="navbar navbar-expand-md bg-light">
+
+  <div class="container justify-content-between">
+  
+    <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-icons">menu</span>
+    </button>
+  
+
+    <h1 class="navbar-brand logo"><a href="index.html">ALOHA</a></h1>
+
+
+    <ul class="navbar-nav">
+      <div class="navbar-collapse collapse" id="navbarContent">
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+            <span class="material-icons icon-md">language</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+    
+      </div>
+    
+      <li class="nav-item dropdown ml-4">
+        <a href="#" class="nav-link align-icons px-3" data-toggle="dropdown" role="button">
+          <img src="./assets/images/profile.jpg" alt="profile picture thumbnail" class="border border-primary thumbnail-sm rounded-circle">
+          <span class="d-none d-md-inline">David Lin</span>
+          <span class="material-icons p d-none d-md-inline">arrow_drop_down</span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMember">
+          <li class="dropdown-item"><a href="#">Account</a></li>
+          <li class="dropdown-item"><a href="#">My bookings</a></li>
+          <li class="dropdown-item"><a href="#">Privacy</a></li>
+          <li class="dropdown-item"><a href="#">Log out</a></li>
+        </ul>
+      </li>
+    
+
+    </ul>
+
+  </div>
+</div>
+
+
+</nav>
+<!-- End of header -->
+
+<!-- Start of content -->
+<div class="content">
+
+
+
+
+
+
+  <div class="container">
+  <div class="row flex-column-reverse flex-lg-row">
+    <!-- Bookings -->
+    <div class="col-lg-8">
+      <h2 class="h4 my-4">My Bookings</h2>
+      <ul class="nav mb-4 font-weight-bold" role="tablist">
+        <li class="nav-item">
+          <a href="#incomingTab" class="nav-link active" data-toggle="tab">Upcoming</a>
+        </li>
+        <li class="nav-item">
+          <a href="#completedTab" class="nav-link" data-toggle="tab">Completed</a>
+        </li>
+      </ul>
+
+      
+
+<div class="tab-content" id="bookingTabs">
+  
+    
+      <div class="tab-pane fade show active" id="incomingTab" role="tabpanel">
+    
+
+    <ul class="list-divider-info">
+    
+      
+
+      <li class="">
+        <div class="card member-card hover-shadow">
+          <div class="row no-gutters">
+
+            <div class="col-md-4">
+              <img src="./assets/images/Rachada1.jpg" alt="" class="member-card-img pic-height-sm">
+            </div>
+
+            <div class="col-md-8">
+              <div class="card-body d-flex flex-column flex-md-row justify-content-between">
+                <ul class="mb-4 mb-md-0">
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">hotel</div>
+                    <div>
+                      <h6 class="">Rachada Hotel</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">date_range</div>
+                    <div>
+                      <h6 class="">17 June 2020 - 19 June 2020</h6>
+                      <p class="card-subtitle"> nights・ adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <div class="material-icons mr-3">attach_money</div>
+                    <div>
+                      <h6 class="">TWD 4,633</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="text-uppercase font-weight-bold">view details</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      
+    
+      
+
+      <li class="">
+        <div class="card member-card hover-shadow">
+          <div class="row no-gutters">
+
+            <div class="col-md-4">
+              <img src="./assets/images/Chatuchack1.jpg" alt="" class="member-card-img pic-height-sm">
+            </div>
+
+            <div class="col-md-8">
+              <div class="card-body d-flex flex-column flex-md-row justify-content-between">
+                <ul class="mb-4 mb-md-0">
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">hotel</div>
+                    <div>
+                      <h6 class="">WOW Life Hotel</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">date_range</div>
+                    <div>
+                      <h6 class="">8 Sep 2020 - 15 Sep 2020</h6>
+                      <p class="card-subtitle"> nights・ adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <div class="material-icons mr-3">attach_money</div>
+                    <div>
+                      <h6 class="">TWD 13,084</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="text-uppercase font-weight-bold">view details</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      
+    
+    </ul>
+
+  </div>
+  
+    
+      <div class="tab-pane fade" id="completedTab" role="tabpanel">
+    
+
+    <ul class="list-divider-info">
+    
+      
+    
+      
+
+      <li class="">
+        <div class="card member-card hover-shadow">
+          <div class="row no-gutters">
+
+            <div class="col-md-4">
+              <img src="./assets/images/Chatuchack1.jpg" alt="" class="member-card-img pic-height-sm">
+            </div>
+
+            <div class="col-md-8">
+              <div class="card-body d-flex flex-column flex-md-row justify-content-between">
+                <ul class="mb-4 mb-md-0">
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">hotel</div>
+                    <div>
+                      <h6 class="">WOW Life Hotel</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                  <li class="d-flex pb-1">
+                    <div class="material-icons mr-3">date_range</div>
+                    <div>
+                      <h6 class="">8 Sep 2020 - 15 Sep 2020</h6>
+                      <p class="card-subtitle"> nights・ adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <div class="material-icons mr-3">attach_money</div>
+                    <div>
+                      <h6 class="">TWD 13,084</h6>
+                      <p class="card-subtitle">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="text-uppercase font-weight-bold">view details</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      
+    
+    </ul>
+
+  </div>
+  
+</div>    </div>
+
+    <!-- Personal data & payment -->
+    <div class="col-lg-4 mb-5">
+
+      <div class="d-flex justify-content-between my-4">
+        <h2 class="h4">
+          Profile
+          <span class="badge badge-primary badge-pill align-icons"><span class="material-icons">done</span> Verified </span>
+        </h2>
+        <a href="#" class="btn btn-link text-uppercase font-weight-bold">edit</a>
+      </div>
+
+      <div class="card bg-info">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6 col-lg-12">
+
+                <h6 class="card-title d-inline-block d-md-block d-lg-inline-block">User details</h6>
+                <img src="./assets/images/profile.jpg" alt="profile picture" class="thumbnail rounded-lg align-top d-inline-block float-right float-md-none float-lg-right">
+                <div class="d-inline-block ml-md-3 ml-lg-0">
+                  <p class="card-subtitle mb-3">David Lin</p>
+                  <p class="card-subtitle mb-3">david0520@mail.com.tw</p>
+                  <p class="card-subtitle mb-3">+886 9 32 456 789</p>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <h6 class="card-title">Payment methods</h6>
+          <ul class="d-flex">
+            <li class="w-50 mr-2">
+              <a class="btn btn-light btn-block bg-light p-3 text-left" href="#">
+                <p class="card-subtitle">xxxx-xxxx-7890</p>
+                <p class="card-subtitle">DAVID LIN</p>
+                <p class="d-flex justify-content-between card-subtitle">08/2029 <span class="icon-visa"></span></p>
+              </a>
+            </li>
+            <li class="w-50">
+              <a class="btn btn-light btn-block bg-light p-3 h-100 centering-total" href="#">
+                <span class="bg-primary rounded-circle material-icons text-light p-1">add</span>
+              </a>
+            </li>
+          </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+<!-- End of content -->
+
+<!-- Start of footer -->
+
+  
+<div class="navbar navbar-expand navbar-light border-top border-info">
+  <div class="container justify-content-between py-3">
+
+    <div class="d-flex w-100 justify-content-between">
+
+      <div class="d-flex flex-column-reverse flex-md-row justify-content-between justify-content-lg-start flex-fill">
+
+        <p class="navbar-text text-sub mr-0 mr-md-6 text-center">© 2020 ALOHA, Inc. All rights reserved.</p>
+        <ul class="nav flex-row text-sub justify-content-center justify-content-md-start">
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="terms.html" class="nav-link">Terms of use</a></li>
+          <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Language & Currency -->
+      <ul class="navbar-nav d-none d-lg-flex">
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterLang">
+            <span class="material-icons icon-md">language</span> English
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterCurrency">
+            <span class="material-icons icon-md">attach_money</span> TWD
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">TWD</a></li>
+            <li class="dropdown-item"><a href="#">USD</a></li>
+            <li class="dropdown-item"><a href="#">JPY</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<!-- End of footer -->
+
+</div>
+<!-- End of app -->
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- JS Initializations -->
+<script>
+  // Lightpicker
+  window.disableLitepickerStyles = true;
+  let picker = new Litepicker({
+    element: document.getElementById('searchDatePicker'),
+    numberOfMonths: 2,
+    selectForward: true,
+    singleMode: false,
+    autoApply: true,
+  });
+
+  // AOS
+  AOS.init({
+    delay: 0,
+    duration: 800,
+    once: false,
+    offset: 150,
+  });
+
+</script>
+</body>
+</html>

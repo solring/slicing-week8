@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOHA Travel</title>
+
+  <!-- Materiel Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Lightpicker Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/style.css"/>
+  <!-- JQ Styles -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- Swiper styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/components/navigation/navigation.min.css">
+  <!-- General Styles -->
+  <link rel="stylesheet" href="assets/style/all.css">
+
+  <!-- Lightpicker -->
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.nocss.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Jquery UI -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+<!-- Start of app -->
+<div class="app">
+
+<!-- Start of header -->
+<nav class="header">
+
+  
+<div class="navbar navbar-expand-md bg-light">
+
+  <div class="container justify-content-between">
+  
+    <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-icons">menu</span>
+    </button>
+  
+
+    <h1 class="navbar-brand logo"><a href="index.html">ALOHA</a></h1>
+
+
+    <ul class="navbar-nav">
+      <div class="navbar-collapse collapse" id="navbarContent">
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+            <span class="material-icons icon-md">language</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+    
+        <li class="nav-item ml-4">
+          <a href="sign-up.html" class="nav-link">Sign up</a>
+        </li>
+    
+      </div>
+    
+      <li class="nav-item ml-4">
+        <a href="login.html" class="nav-link">Login</a>
+      </li>
+    
+
+    </ul>
+
+  </div>
+</div>
+
+
+  
+
+<div class="bg-info text-center">
+ 
+<a href="./search-result.html" class="d-md-none btn container py-3 px-3">
+  <span class="material-icons text-dark">arrow_back</span>
+  <span class="text-secondary small">Bangkok・17 June - 19 June・2 adults・1 room</span>
+</a>
+
+
+ 
+<form class="py-2 py-md-4 search-bar container d-none d-md-block" action="search-result.html" method="get">
+
+  <ul class="search-options search-collapse-sm">
+    <!-- Field Destination -->
+    <li class="dropdown">
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
+        <div class="d-none d-md-block">
+          <div class="d-flex align-items-center">
+            <div class="material-icons pr-lg-3 pr-2">location_on</div>
+            <div class="text-left">
+              <h5 class="search-title">destination</h5>
+              <p class="search-subtitle search-location">Bangkok, Thailand</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-md-none text-secondary">
+          Bangkok
+        </div>
+      </button>
+
+      <ul class="dropdown-menu list-unstyled w-100">
+        
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Bangkok</p>
+                  <p class="small">Thailand</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Osaka</p>
+                  <p class="small">Japan</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Roma</p>
+                  <p class="small">Italy</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Paris</p>
+                  <p class="small">France</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="d-block">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Reykjavik</p>
+                  <p class="small">Iceland</p>
+                </div>
+              </div>
+            </a>
+          </li>
+         
+      </ul>
+    </li>
+    
+    <!-- Field Calendar -->
+    <li>
+      <button id="searchDatePicker" class="btn btn-light btn-block" type="button" data-toggle="dropdown">
+
+        <div class="d-none d-md-flex align-items-center">
+          <div class="material-icons pr-lg-3 pr-2">date_range</div>
+
+          <ul class="list-unstyled list-row-divider-info d-none d-lg-flex">
+            <li>
+              <h5 class="search-title">check-in</h5>
+              <p class="search-subtitle search-date-start">17 June</p>
+            </li>
+            <li>
+              <h5 class="search-title">check-out</h6>
+              <p class="search-subtitle search-date-end">19 June</p>
+            </li>
+          </ul>
+          <div class="text-left d-lg-none">
+            <h5 class="search-title">check-in / out</h5>
+            <p class="search-subtitle search-n-guests">17 june / 19 june</p>
+          </div> 
+
+        </div>
+        <div class="d-md-none text-secondary">
+          17 june / 19 june 
+        </div>
+      </button>
+    </li>
+      
+
+    <!-- Field Guests -->
+    <li class="dropdown border-right-0">
+
+      <button class="btn btn-light btn-block" type="button" data-toggle="dropdown" data-offset="0,8">
+        <div class="d-none d-md-flex align-items-center">
+          <div class="material-icons pr-lg-3 pr-2">person</div>
+          <div class="text-left">
+            <h5 class="search-title">guests</h5>
+            <p class="search-subtitle search-n-guests">2 adults・1 room</p>
+          </div>
+        </div>
+        <div class="d-md-none text-secondary">
+          2 adults・1 room
+        </div>
+      </button>
+
+      <ul class="dropdown-menu list-unstyled w-100">
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Adult</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Child</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Room</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+         
+        </ul>
+    </li>
+    <li class="flex-grow-0 flex-shrink-0 d-none d-md-block">
+      <button class="btn btn-primary search-btn text-uppercase" type="submit">Search</button>
+    </li>
+  </ul>
+
+</form>
+
+</div>
+</nav>
+<!-- End of header -->
+
+<!-- Start of content -->
+<div class="content">
+
+
+
+
+
+
+
+
+<div class="pt-md-4 container">
+
+  <!-- Picture grid -->
+  <div class="row hotel-pic-group no-gutters d-none d-md-flex">
+    <div class="col-md-7 h-100">
+      <div class="pic-fill-container">
+        <img src="./assets/images/Rachada1.jpg" alt="room pic 1">
+      </div>
+    </div>
+    <div class="col-md-5 h-100 d-none d-md-block pl-md-1 pl-lg-2">
+      <div class="row h-100 no-gutters">
+        <div class="col-12 h-50 pb-md-1 pb-lg-2">
+          <div class="pic-fill-container">
+            <img src="./assets/images/Rachada2.jpg" alt="room pic 2">
+          </div>
+        </div>
+        <div class="col-5 h-50">
+          <div class="pic-fill-container">
+            <img src="./assets/images/Rachada3.jpg" alt="room pic 3">
+          </div>
+        </div>
+        <div class="col-7 h-50 pl-sm-1 pl-lg-2 d-flex flex-column">
+          <div class="h-75 pb-sm-1 pb-lg-2">
+            <div class="pic-fill-container">
+              <img src="./assets/images/Rachada4.jpg" alt="room pic 4">
+            </div>
+          </div>
+          <button class="btn btn-dark btn-block h-25 text-uppercase p-0 text-sub">See All 10 photos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Picture swiper -->
+  <div id="swiperPic" class="swiper-container hotel-pic-swiper d-md-none">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada1.jpg" alt="room pic 1"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada2.jpg" alt="room pic 2"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada3.jpg" alt="room pic 3"></div>
+      </li>
+      <li class="swiper-slide">
+        <div class="pic-fill-container"><img src="./assets/images/Rachada4.jpg" alt="room pic 4"></div>
+      </li>
+    </ul>
+
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+  </div>
+
+  <div class="d-flex flex-column flex-md-row align-items-md-center pt-md-4 pt-3">
+    <h2 class="mr-3">Rachada Hotel</h2>
+    <div class="align-icons">
+      <span class="material-icons align-center">
+        star star star star
+      </span>
+      <span class="text-secondary text-sub">4.0(283)</span>
+    </div>
+  </div>
+
+  <p class="mb-md-4 mb-3"><a href="#" class="text-primary text-sub">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</a></p>
+  <p class="text-secondary mb-6">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms.</p>
+
+  <h3 class="mb-md-4 mb-3">Select your room</h3>
+  <div class="d-none d-md-flex align-items-center mb-md-6">
+    <div class="div-badge bg-info">Bangkok, Thailand</div>
+    <div class="div-badge bg-info">17 June - 19 June・2 nights</div>
+    <div class="div-badge bg-info">2 adults・1 room</div>
+    <a href="#" class="text-uppercase text font-weight-bold ml-4">edit detail</a>
+  </div>
+
+</div>
+
+<script>
+  // Swiper
+  let swiper = new Swiper('#swiperPic', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+  
+<div class="container">
+<table class="w-100 list-divider-info mb-6">
+  <tr class="row no-gutters d-none d-md-flex text-uppercase">
+    <th class="col-md-6">room type</th>
+    <th class="col-md-2 text-center">sleeps</th>
+    <th class="col-md-2 text-center">price</th>
+    <th class="col-md-2 text-center">rooms</th>
+  </tr>
+  
+  <tr class="row no-gutters">
+    <td class="card col-md-6">
+      <div class="row no-gutters">
+        <!-- room picture -->
+        <div class="col-6">
+          <img class="pic-height-sm room-card-img" src="./assets/images/roomA.jpg" alt="room picture">
+        </div>
+        <!-- room description -->
+        <div class="col-6 room-card-desc">
+          <div class="p-2 centering-vertical h-100">
+            <h6 class="mt-1">Deluxe Double Room A</h6>
+            <p class="card-text mb-2">1 bed (Queen size)</p>
+
+            <!-- tags -->
+            <ul class="room-tags-group flex-fill d-flex flex-lg-column flex-wrap">
+            
+              <li class="text-secondary">
+                <span class="material-icons">wifi</span>
+                <span class="d-none d-lg-inline">Wifi</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">restaurant</span>
+                <span class="d-none d-lg-inline">Breakfast</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">tv</span>
+                <span class="d-none d-lg-inline">Television</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">ac_unit</span>
+                <span class="d-none d-lg-inline">Air Conditioner</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">kitchen</span>
+                <span class="d-none d-lg-inline">Refrigerator</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">local_bar</span>
+                <span class="d-none d-lg-inline">Mini Bar</span>
+              </li>
+            
+            </ul>
+            <div class="d-block d-md-none">
+              <span class="material-icons">person</span><span class="material-icons">person</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- HIDDEN when larger than md -->
+      <div class="card-footer px-2 py-2 d-md-none border-0 bg-info">
+        <div class="row no-gutters">
+          <div class="col-6 centering-vertical my-2" data-toggle="collapse">
+          <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>          </div>
+          <div class="col-6 centering-vertical text-right">
+            <p class="text-secondary text-crossout text-sub">TWD 1,600</p><h6>TWD <span class="text-primary">1,490</span></h6>          </div>
+        </div>
+      </div>
+      <!--------------------------------->
+    </td>
+
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div>
+        <span class="material-icons">person</span><span class="material-icons">person</span>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="text-center">
+        <p class="text-secondary text-crossout text-sub">TWD 1,600</p><h6>TWD <span class="text-primary">1,490</span></h6>        <p class="card-text">per night</p>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>    </td>
+  </tr>
+  
+  <tr class="row no-gutters">
+    <td class="card col-md-6">
+      <div class="row no-gutters">
+        <!-- room picture -->
+        <div class="col-6">
+          <img class="pic-height-sm room-card-img" src="./assets/images/roomB.jpg" alt="room picture">
+        </div>
+        <!-- room description -->
+        <div class="col-6 room-card-desc">
+          <div class="p-2 centering-vertical h-100">
+            <h6 class="mt-1">Deluxe Double Room B</h6>
+            <p class="card-text mb-2">1 bed (Queen size)</p>
+
+            <!-- tags -->
+            <ul class="room-tags-group flex-fill d-flex flex-lg-column flex-wrap">
+            
+              <li class="text-secondary">
+                <span class="material-icons">wifi</span>
+                <span class="d-none d-lg-inline">Wifi</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">restaurant</span>
+                <span class="d-none d-lg-inline">Breakfast</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">tv</span>
+                <span class="d-none d-lg-inline">Television</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">ac_unit</span>
+                <span class="d-none d-lg-inline">Air Conditioner</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">kitchen</span>
+                <span class="d-none d-lg-inline">Refrigerator</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">local_bar</span>
+                <span class="d-none d-lg-inline">Mini Bar</span>
+              </li>
+            
+            </ul>
+            <div class="d-block d-md-none">
+              <span class="material-icons">person</span><span class="material-icons">person</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- HIDDEN when larger than md -->
+      <div class="card-footer px-2 py-2 d-md-none border-0 bg-info">
+        <div class="row no-gutters">
+          <div class="col-6 centering-vertical my-2" data-toggle="collapse">
+          <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>          </div>
+          <div class="col-6 centering-vertical text-right">
+            <h6>TWD 1,600</h6>          </div>
+        </div>
+      </div>
+      <!--------------------------------->
+    </td>
+
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div>
+        <span class="material-icons">person</span><span class="material-icons">person</span>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="text-center">
+        <h6>TWD 1,600</h6>        <p class="card-text">per night</p>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>    </td>
+  </tr>
+  
+  <tr class="row no-gutters">
+    <td class="card col-md-6">
+      <div class="row no-gutters">
+        <!-- room picture -->
+        <div class="col-6">
+          <img class="pic-height-sm room-card-img" src="./assets/images/Rachada1.jpg" alt="room picture">
+        </div>
+        <!-- room description -->
+        <div class="col-6 room-card-desc">
+          <div class="p-2 centering-vertical h-100">
+            <h6 class="mt-1">Deluxe Suite with Pool</h6>
+            <p class="card-text mb-2">1 bed (Queen size)</p>
+
+            <!-- tags -->
+            <ul class="room-tags-group flex-fill d-flex flex-lg-column flex-wrap">
+            
+              <li class="text-secondary">
+                <span class="material-icons">wifi</span>
+                <span class="d-none d-lg-inline">Wifi</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">restaurant</span>
+                <span class="d-none d-lg-inline">Breakfast</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">tv</span>
+                <span class="d-none d-lg-inline">Television</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">ac_unit</span>
+                <span class="d-none d-lg-inline">Air Conditioner</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">kitchen</span>
+                <span class="d-none d-lg-inline">Refrigerator</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">room_service</span>
+                <span class="d-none d-lg-inline">Room Service</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">local_bar</span>
+                <span class="d-none d-lg-inline">Mini Bar</span>
+              </li>
+            
+              <li class="text-secondary">
+                <span class="material-icons">smoke_free</span>
+                <span class="d-none d-lg-inline">Smoke Free</span>
+              </li>
+            
+            </ul>
+            <div class="d-block d-md-none">
+              <span class="material-icons">person</span><span class="material-icons">person</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- HIDDEN when larger than md -->
+      <div class="card-footer px-2 py-2 d-md-none border-0 bg-info">
+        <div class="row no-gutters">
+          <div class="col-6 centering-vertical my-2" data-toggle="collapse">
+          <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>          </div>
+          <div class="col-6 centering-vertical text-right">
+            <h6>TWD 1,980</h6>          </div>
+        </div>
+      </div>
+      <!--------------------------------->
+    </td>
+
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div>
+        <span class="material-icons">person</span><span class="material-icons">person</span>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="text-center">
+        <h6>TWD 1,980</h6>        <p class="card-text">per night</p>
+      </div>
+    </td>
+    <td class="d-none d-md-flex col-md-2 centering-total">
+      <div class="d-flex justify-content-between align-items-center">
+  <a href="#cartCollapse" class="material-icons text-dark mr-3" data-toggle="collapse">remove</a>
+    0  <a href="#cartCollapse" class="material-icons text-dark ml-3" data-toggle="collapse">add</a>
+</div>    </td>
+  </tr>
+  
+</table>
+</div>
+
+<!-- Cart bottom modal -->
+<div id="cartCollapse" class="collapse bottom-modal fixed-bottom">
+  <div class="bottom-modal-wrapper">
+    <div class="container d-flex justify-content-md-between flex-column flex-md-row">
+      <div>
+        <p class="small text-secondary">1 room・2 night</p>
+        <h4 class="mb-4">TWD 3,960</h4>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-outline-primary btn-lg btn-block text-uppercase" data-target="#cartCollapse" data-toggle="collapse">cencel</button>
+        </div>
+        <div class="col-6">
+          <a href="./reservation.html" class="btn btn-primary btn-lg btn-block text-uppercase">reserve</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="py-4 bg-info subscribe">
+  <div class="container">
+    <div class="row no-gutters justify-content-between align-items-center">
+      <div class="col-md-4 col-lg-5 text-center text-md-left">
+        <h2 class="mb-3 mb-md-0">Subscribe for Exclusive Offer</h2>
+      </div>
+      <div class="col-md-7">
+        <form action="#" class="input-group input-group-lg h-100 w-100" method="post">
+          <input type="text" class="form-control h-100" name="subscribeEmail" placeholder="Your email address">
+          <div class="input-group-append">
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- End of content -->
+
+<!-- Start of footer -->
+
+  
+<div class="navbar navbar-expand navbar-light border-top border-info">
+  <div class="container justify-content-between py-3">
+
+    <div class="d-flex w-100 justify-content-between">
+
+      <div class="d-flex flex-column-reverse flex-md-row justify-content-between justify-content-lg-start flex-fill">
+
+        <p class="navbar-text text-sub mr-0 mr-md-6 text-center">© 2020 ALOHA, Inc. All rights reserved.</p>
+        <ul class="nav flex-row text-sub justify-content-center justify-content-md-start">
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="terms.html" class="nav-link">Terms of use</a></li>
+          <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Language & Currency -->
+      <ul class="navbar-nav d-none d-lg-flex">
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterLang">
+            <span class="material-icons icon-md">language</span> English
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterCurrency">
+            <span class="material-icons icon-md">attach_money</span> TWD
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">TWD</a></li>
+            <li class="dropdown-item"><a href="#">USD</a></li>
+            <li class="dropdown-item"><a href="#">JPY</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<!-- End of footer -->
+
+</div>
+<!-- End of app -->
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- JS Initializations -->
+<script>
+  // Lightpicker
+  window.disableLitepickerStyles = true;
+  let picker = new Litepicker({
+    element: document.getElementById('searchDatePicker'),
+    numberOfMonths: 2,
+    selectForward: true,
+    singleMode: false,
+    autoApply: true,
+  });
+
+  // AOS
+  AOS.init({
+    delay: 0,
+    duration: 800,
+    once: false,
+    offset: 150,
+  });
+
+</script>
+</body>
+</html>

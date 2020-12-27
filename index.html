@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOHA Travel</title>
+
+  <!-- Materiel Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Lightpicker Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/style.css"/>
+  <!-- JQ Styles -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- Swiper styles -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/components/navigation/navigation.min.css">
+  <!-- General Styles -->
+  <link rel="stylesheet" href="assets/style/all.css">
+
+  <!-- Lightpicker -->
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/js/main.nocss.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Jquery UI -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+<!-- Start of app -->
+<div class="app">
+
+<!-- Start of header -->
+<nav class="header">
+
+  
+<div class="navbar navbar-expand-md bg-light">
+
+  <div class="container justify-content-between">
+  
+    <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-icons">menu</span>
+    </button>
+  
+
+    <h1 class="navbar-brand logo"><a href="index.html">ALOHA</a></h1>
+
+
+    <ul class="navbar-nav">
+      <div class="navbar-collapse collapse" id="navbarContent">
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+            <span class="material-icons icon-md">language</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+    
+        <li class="nav-item ml-4">
+          <a href="sign-up.html" class="nav-link">Sign up</a>
+        </li>
+    
+      </div>
+    
+      <li class="nav-item ml-4">
+        <a href="login.html" class="nav-link">Login</a>
+      </li>
+    
+
+    </ul>
+
+  </div>
+</div>
+
+
+</nav>
+<!-- End of header -->
+
+<!-- Start of content -->
+<div class="content">
+
+
+  <div id="carouselMain" class="banner carousel slide" data-ride="carousel">
+  <ul class="carousel-inner">
+    <li class="carousel-item active">
+      <img src="assets/images/index-banner.jpg" class="w-100" alt="carousel 1">
+      <div class="carousel-caption">
+        <h2 class="fz-title">Discover your ideal hotel</h2>
+      </div>
+    </li>
+    <li class="carousel-item">
+      <img src="assets/images/RangRak.jpg" class="w-100" alt="carousel 2">
+      <div class="carousel-caption">
+        <h2 class="fz-title">Essence of relaxation</h2>
+      </div>
+    </li>
+    <li class="carousel-item">
+      <img src="assets/images/Watana2.jpg" class="w-100" alt="carousel 3">
+      <div class="carousel-caption">
+        <h2 class="fz-title">Explore fantastic vacation</h2>
+      </div>
+    </li>
+  </ul>
+  <div class="container-custom-md">
+    <a class="carousel-control-prev" href="#carouselMain" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselMain" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Search Bar -->
+<div class="container-custom-md">
+
+
+<form class="p-4 search-bar bg-info rounded-lg" action="search-result.html" method="get">
+  <ul class="search-options flex-column flex-lg-row">
+    <!-- Field Destination -->
+    <li class="dropdown mb-3 mb-lg-0">
+      <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
+        <span class="material-icons">location_on</span>
+        Destination
+      </button>
+      <ul class="dropdown-menu list-unstyled w-100">
+        
+          <li class="dropdown-item">
+            <a href="#" class="btn btn-link">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Bangkok</p>
+                  <p class="small">Thailand</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="btn btn-link">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Osaka</p>
+                  <p class="small">Japan</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="btn btn-link">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Roma</p>
+                  <p class="small">Italy</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="btn btn-link">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Paris</p>
+                  <p class="small">France</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+          <li class="dropdown-item">
+            <a href="#" class="btn btn-link">
+              <div class="d-flex">
+                <div class="material-icons">grade</div>
+                <div>
+                  <p>Reykjavik</p>
+                  <p class="small">Iceland</p>
+                </div>
+              </div>
+            </a>
+          </li>
+         
+      </ul>
+    </li>
+    
+    <!-- Field Calendar -->
+    <li class="mb-3 mb-lg-0">
+      <button id="searchDatePicker" class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown">
+        <span class="material-icons">date_range</span>
+        Check-in / Check-out
+      </button>
+    </li>
+      
+
+    <!-- Field Guests -->
+    <li class="dropdown mb-3 mb-lg-0">
+      <button class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown" data-offset="0,8">
+        <span class="material-icons">person</span>
+        Guests
+      </button>
+      <ul class="dropdown-menu list-unstyled w-100">
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Adult</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Child</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+        
+          <li class="dropdown-item">
+              <div class="d-flex justify-content-between">
+                <p>Room</p>
+                <div class="d-flex justify-content-between align-items-center">
+  <a href="#" class="material-icons text-dark mr-3" >remove</a>
+    0  <a href="#" class="material-icons text-dark ml-3" >add</a>
+</div>              </div>
+          </li>
+         
+        </ul>
+    </li>
+    <li class="flex-grow-0 flex-shrink-0">
+      <button class="btn btn-primary search-btn btn-block" type="submit">Search</button>
+    </li>
+  </ul>
+
+</form></div>  
+
+<section class="container">
+  <h3 class="mb-4">Top Choices</h3>
+
+  <ul class="nav nav-tags mb-4">
+    <li class="nav-item">
+      <a class="nav-link active" href="#Bali" data-toggle="tab"><h4>Bali<span class="notation">128</span></h4></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Okinawa" data-toggle="tab"><h4>Okinawa<span class="notation">67</span></h4></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Taipei" data-toggle="tab"><h4>Taipei<span class="notation">53</span></h4></a>
+    </li>
+  </ul>
+
+
+  <div class="tab-content">
+  
+    
+    <div id="Bali" class="tab-pane fade active show">
+    
+
+      <div id="swiperBali" class="swiper-container w-100">
+        <ul class="swiper-wrapper">
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top1.jpg" alt="hotel 0">
+              <h5 class="my-2">Hotel Aqua</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade grade               </span>
+              5.0<span class="text-muted small">・2k reviews</span>
+              <p class="text-secondary">TWD 2,480</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top2.jpg" alt="hotel 1">
+              <h5 class="my-2">Mr. Kawasaki Inn</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・500 reviews</span>
+              <p class="text-secondary">TWD 3,380</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top3.jpg" alt="hotel 2">
+              <h5 class="my-2">Weekly Paradise</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・470 reviews</span>
+              <p class="text-secondary">TWD 4,780</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top4.jpg" alt="hotel 3">
+              <h5 class="my-2">Beast Hotel</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・238 reviews</span>
+              <p class="text-secondary">TWD 1,980</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top3.jpg" alt="hotel 4">
+              <h5 class="my-2">Celebrity Palace</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・586 reviews</span>
+              <p class="text-secondary">TWD 1,980</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top2.jpg" alt="hotel 5">
+              <h5 class="my-2">Forever Palace</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・320 reviews</span>
+              <p class="text-secondary">TWD 4,780</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top1.jpg" alt="hotel 6">
+              <h5 class="my-2">RR Space</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・238 reviews</span>
+              <p class="text-secondary">TWD 2,090</p>
+            </a>
+          </li>
+        
+        </ul>
+
+        <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-33"></div>
+        <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-33"></div>
+      </div>
+
+    </div>
+  
+    
+    <div id="Okinawa" class="tab-pane fade">
+    
+
+      <div id="swiperOkinawa" class="swiper-container w-100">
+        <ul class="swiper-wrapper">
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top3.jpg" alt="hotel 0">
+              <h5 class="my-2">Indigo Hotel</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・238 reviews</span>
+              <p class="text-secondary">TWD 2,980</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top2.jpg" alt="hotel 1">
+              <h5 class="my-2">Celebrity Palace</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・586 reviews</span>
+              <p class="text-secondary">TWD 1,980</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top4.jpg" alt="hotel 2">
+              <h5 class="my-2">Forever Palace</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・320 reviews</span>
+              <p class="text-secondary">TWD 4,780</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top1.jpg" alt="hotel 3">
+              <h5 class="my-2">RR Space</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・238 reviews</span>
+              <p class="text-secondary">TWD 2,090</p>
+            </a>
+          </li>
+        
+        </ul>
+
+        <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-33"></div>
+        <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-33"></div>
+      </div>
+
+    </div>
+  
+    
+    <div id="Taipei" class="tab-pane fade">
+    
+
+      <div id="swiperTaipei" class="swiper-container w-100">
+        <ul class="swiper-wrapper">
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top4.jpg" alt="hotel 0">
+              <h5 class="my-2">Weekly Paradise</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・470 reviews</span>
+              <p class="text-secondary">TWD 4,780</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top1.jpg" alt="hotel 1">
+              <h5 class="my-2">Hotel Aqua</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade grade               </span>
+              5.0<span class="text-muted small">・2k reviews</span>
+              <p class="text-secondary">TWD 2,480</p>
+            </a>
+          </li>
+        
+          <li class="swiper-slide">
+            <a class="d-block text-dark" href="./detail.html">
+              <img class="pic-height-sm rounded-lg" src="./assets/images/top2.jpg" alt="hotel 2">
+              <h5 class="my-2">Mr. Kawasaki Inn</h5>
+              <span class="material-icons fz-grade">
+                grade grade grade grade               </span>
+              4.0<span class="text-muted small">・500 reviews</span>
+              <p class="text-secondary">TWD 3,380</p>
+            </a>
+          </li>
+        
+        </ul>
+
+        <div id="swiperHotelPrev" class="swiper-button-prev swiper-button-round t-33"></div>
+        <div id="swiperHotelNext" class="swiper-button-next swiper-button-round t-33"></div>
+      </div>
+
+    </div>
+  
+  </div>
+</section>  
+<section class="container">
+  <h3 class="mb-4">Popular Destinations</h3>
+  <ul class="row">
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Osaka ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">Japan</p>
+              <h5 class="text-light">Osaka</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Kyoto ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">Japan</p>
+              <h5 class="text-light">Kyoto</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Reykjavic ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">Iceland</p>
+              <h5 class="text-light">Reykjavic</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Paris ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">France</p>
+              <h5 class="text-light">Paris</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Roma ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">Italy</p>
+              <h5 class="text-light">Roma</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+    <li class="col-md-6 col-lg-4 mb-2 mb-md-4">
+      <button class="btn btn-block px-4 py-3 rounded-lg bg-img-Bangkok ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="text-left">
+              <p class="small text-muted text-uppercase">Thailand</p>
+              <h5 class="text-light">Bangkok</h5>
+            </div>
+            <div class="material-icons icon-lg text-light">keyboard_arrow_down</div>
+          </div>
+      </button>
+    </li>
+  
+  </ul>
+</section>
+
+
+
+
+
+
+<section class="mb-6 container">
+  <div class="d-flex justify-content-between align-items-start">
+    <h3 class="mb-4">Get Inspiration</h3>
+    <a href="#" class="btn btn-outline-primary text-uppercase">See More</a>
+  </div>
+
+  <div id="swiperBlog" class="swiper-container w-100">
+  <ul class="swiper-wrapper">
+    <li class="swiper-slide">
+      <img src="./assets/images/italy.jpg" alt="inspiration italy" class="rounded-lg pic-height-md">
+      <h4 class="mt-4 mb-2">The Fifth Most Visited Country</h4>
+      <p class="text-secondary">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
+    </li>
+    <li class="swiper-slide">
+      <img src="./assets/images/Bangkok.jpg" alt="inspiration bangkok" class="rounded-lg pic-height-md">
+      <h4 class="mt-4 mb-2">Visit Thailand for Bangkok</h4>
+      <p class="text-secondary">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
+    </li>
+    <li class="swiper-slide">
+      <img src="./assets/images/NewZealand.jpg" alt="inspiration new zealand" class="rounded-lg pic-height-md">
+      <h4 class="mt-4 mb-2">Lord of the Rings Tour</h4>
+      <p class="text-secondary">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+    </li>
+  </ul>
+  </div>
+</section>
+
+<script>
+  // Swiper
+  let locations = [
+    "Bali", "Okinawa", "Taipei"
+  ];
+  let swipers = [];
+
+  locations.forEach( (l) => {
+    let swiper = new Swiper('#swiper' + l, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '#swiperHotelNext',
+        prevEl: '#swiperHotelPrev',
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
+      }
+    });
+    swipers.push(swiper);
+  });
+
+  let swiperBlog = new Swiper('#swiperBlog', {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+  <section class="subscribe-lg bg-info">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <h2 class="fz-title mb-md-4 mb-3">Subscribe for Exclusive Offer</h2>
+    <form action="#" class="input-group input-group-lg w-md-50" method="post">
+      <input type="text" class="form-control" name="subscribeEmail" placeholder="Your email address">
+      <div class="input-group-append">
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+</div>
+<!-- End of content -->
+
+<!-- Start of footer -->
+
+  
+<div class="navbar navbar-expand navbar-light border-top border-info">
+  <div class="container justify-content-between py-3">
+
+    <div class="d-flex w-100 justify-content-between">
+
+      <div class="d-flex flex-column-reverse flex-md-row justify-content-between justify-content-lg-start flex-fill">
+
+        <p class="navbar-text text-sub mr-0 mr-md-6 text-center">© 2020 ALOHA, Inc. All rights reserved.</p>
+        <ul class="nav flex-row text-sub justify-content-center justify-content-md-start">
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="terms.html" class="nav-link">Terms of use</a></li>
+          <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy policy</a></li>
+        </ul>
+      </div>
+
+
+      <!-- Language & Currency -->
+      <ul class="navbar-nav d-none d-lg-flex">
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterLang">
+            <span class="material-icons icon-md">language</span> English
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">English</a></li>
+            <li class="dropdown-item"><a href="#">中文</a></li>
+            <li class="dropdown-item"><a href="#">日本語</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropup">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="dropdownFooterCurrency">
+            <span class="material-icons icon-md">attach_money</span> TWD
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownFooterLang">
+            <li class="dropdown-item"><a href="#">TWD</a></li>
+            <li class="dropdown-item"><a href="#">USD</a></li>
+            <li class="dropdown-item"><a href="#">JPY</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<!-- End of footer -->
+
+</div>
+<!-- End of app -->
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- JS Initializations -->
+<script>
+  // Lightpicker
+  window.disableLitepickerStyles = true;
+  let picker = new Litepicker({
+    element: document.getElementById('searchDatePicker'),
+    numberOfMonths: 2,
+    selectForward: true,
+    singleMode: false,
+    autoApply: true,
+  });
+
+  // AOS
+  AOS.init({
+    delay: 0,
+    duration: 800,
+    once: false,
+    offset: 150,
+  });
+
+</script>
+</body>
+</html>
