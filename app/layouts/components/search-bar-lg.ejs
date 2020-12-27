@@ -13,14 +13,14 @@
 %>
 
 <div class="bg-info text-center">
-<% if ( options == "with-return-btn") {  %> 
+<% if ( options == "with-return-btn") {  %>
 <a href="./search-result.html" class="d-md-none btn container py-3 px-3">
   <span class="material-icons text-dark">arrow_back</span>
   <span class="text-secondary small">Bangkok・17 June - 19 June・2 adults・1 room</span>
 </a>
 <% } %>
 
-<% if ( options == "with-return-btn") {  %> 
+<% if ( options == "with-return-btn") {  %>
 <form class="py-2 py-md-4 search-bar container d-none d-md-block" action="search-result.html" method="get">
 <% } else { %>
 <form class="py-2 py-md-4 search-bar container" action="search-result.html" method="get">
@@ -47,8 +47,8 @@
         <% for (var i=0; i<locations.length; i++) { %>
           <li class="dropdown-item">
             <a href="#" class="d-block">
-              <div class="d-flex">
-                <div class="material-icons">grade</div>
+              <div class="d-flex align-items-center">
+                <div class="material-icons icon-lg mr-2">grade</div>
                 <div>
                   <p><%- locations[i][0] -%></p>
                   <p class="small"><%- locations[i][1] -%></p>
@@ -56,10 +56,10 @@
               </div>
             </a>
           </li>
-        <% } %> 
+        <% } %>
       </ul>
     </li>
-    
+
     <!-- Field Calendar -->
     <li>
       <button id="searchDatePicker" class="btn btn-light btn-block" type="button" data-toggle="dropdown">
@@ -80,15 +80,15 @@
           <div class="text-left d-lg-none">
             <h5 class="search-title">check-in / out</h5>
             <p class="search-subtitle search-n-guests">17 june / 19 june</p>
-          </div> 
+          </div>
 
         </div>
         <div class="d-md-none text-secondary">
-          17 june / 19 june 
+          17 june / 19 june
         </div>
       </button>
     </li>
-      
+
 
     <!-- Field Guests -->
     <li class="dropdown border-right-0">
@@ -114,7 +114,7 @@
                 <%- include('./number-picker', {number: 0, href: "#", options: ""}) -%>
               </div>
           </li>
-        <% } %> 
+        <% } %>
         </ul>
     </li>
     <li class="flex-grow-0 flex-shrink-0 d-none d-md-block">

@@ -23,9 +23,9 @@
       <ul class="dropdown-menu list-unstyled w-100">
         <% for (var i=0; i<locations.length; i++) { %>
           <li class="dropdown-item">
-            <a href="#" class="btn btn-link">
-              <div class="d-flex">
-                <div class="material-icons">grade</div>
+            <a href="#" class="d-block">
+              <div class="d-flex align-items-center">
+                <div class="material-icons icon-lg mr-2">grade</div>
                 <div>
                   <p><%- locations[i][0] -%></p>
                   <p class="small"><%- locations[i][1] -%></p>
@@ -33,10 +33,10 @@
               </div>
             </a>
           </li>
-        <% } %> 
+        <% } %>
       </ul>
     </li>
-    
+
     <!-- Field Calendar -->
     <li class="mb-3 mb-lg-0">
       <button id="searchDatePicker" class="btn btn-light btn-block text-left pl-3" type="button" data-toggle="dropdown">
@@ -44,7 +44,7 @@
         Check-in / Check-out
       </button>
     </li>
-      
+
 
     <!-- Field Guests -->
     <li class="dropdown mb-3 mb-lg-0">
@@ -60,7 +60,7 @@
                 <%- include('./number-picker', {number: 0, href: "#", options: ""}) -%>
               </div>
           </li>
-        <% } %> 
+        <% } %>
         </ul>
     </li>
     <li class="flex-grow-0 flex-shrink-0">
