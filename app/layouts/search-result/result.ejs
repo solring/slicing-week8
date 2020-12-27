@@ -4,7 +4,7 @@
   <!-- Title & navbar -->
   <div class="row align-items-basline mb-3">
     <div class="col-md-4 text-center text-md-left">
-      <h2 class="mb-0">Bangkok<span class="notation-lg text-primary">3,240</span></h2>
+      <h2 class="fixed-size mb-0">Bangkok<span class="notation-lg text-primary">3,240</span></h2>
     </div>
 
     <div class="col-md-8 d-none d-md-block">
@@ -27,18 +27,18 @@
 
   <!-- Filter btn groups: only shown for phone -->
   <div class="d-md-none">
-    <ul class="d-flex align-items-center justify-content-center w-100 list-row-divider-info mb-3">
-      <li class="flex-fill">
+    <ul class="d-flex align-items-center justify-content-center w-100 mb-3">
+      <li class="flex-fill border-right border-info">
         <a href="#filterCollapse" class="btn btn-link btn-block font-weight-bold text-dark text-sub" data-toggle="collapse" >
-          <span class="material-icons">filter_list</span> FILTER
+          <span class="material-icons icon-lg">filter_list</span> FILTER
         </a>
       </li>
       <li class="flex-fill">
         <div class="dropdown">
           <a href="#" class="btn btn-link btn-block font-weight-bold text-dark text-sub" data-toggle="dropdown">
-            <span class="material-icons">sort</span> SORT
+            <span class="material-icons icon-lg">sort</span> SORT
           </a>
-          <ul class="dropdown-menu dropdown-menu-right bg-info border-0">
+          <ul class="dropdown-menu dropdown-menu-right bg-info border-0 vw-100 mx-3">
             <li class="dropdown-item active"><a href="#pane0" data-toggle="tab" class="font-weight-bold">Recommended</a></li>
             <li class="dropdown-item"><a href="#pane1" data-toggle="tab" class="font-weight-bold">Lowest Price</a></li>
             <li class="dropdown-item"><a href="#pane2" data-toggle="tab" class="font-weight-bold">Best value</a></li>
@@ -55,7 +55,7 @@
     <div class="col-md-4 d-none d-md-block mb-4">
       <nav class="card bg-info border-0">
         <div class="card-body">
-          <%- include('./filter') -%> 
+          <%- include('./filter', {filterName: "filter"}) -%>
         </div>
       </nav>
     </div>
@@ -91,16 +91,16 @@
 
   <div class="fullscreen-header bg-light">
     <div>
-      <span class="material-icons">filter_list</span> FILTER
+      <span class="material-icons icon-lg">filter_list</span> FILTER
     </div>
-    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#filterCollapse">
-      <span class="material-icons">close</span>
+    <button type="button" class="btn btn-link text-dark" data-toggle="collapse" data-target="#filterCollapse">
+      <span class="material-icons icon-lg">close</span>
     </button>
   </div>
 
-  <div class="fullscreen-content bg-info"> 
+  <div class="fullscreen-content bg-info">
     <div class="container pt-4">
-      <%- include('./filter') -%> 
+      <%- include('./filter', {filterName: "filterSmall"}) -%>
     </div>
   </div>
 
@@ -117,4 +117,3 @@
   </div>
 </div>
 
-  

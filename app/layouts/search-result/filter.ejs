@@ -1,12 +1,12 @@
-<% 
-  genCheckBox = (sec) => {
+<%
+  genCheckBox = (sec, prefix) => {
     res = "<h6 class=\"card-title\">" + sec.title + "</h6>";
     res += "<ul class=\"list-gap-8\">"
 
     for (var i = 0; i<sec.options.length; i++) {
       let substr = "<li class=\"custom-control custom-checkbox\"> \
-                <input type=\"checkbox\" class=\"custom-control-input\" id=\"" + sec.options[i].name + "Check\" name=\"" + sec.options[i].name + "\"> \
-                <label for=\"" + sec.options[i].name + "Check\" class=\"custom-control-label text-secondary\">" + sec.options[i].text + "</label> \
+                <input type=\"checkbox\" class=\"custom-control-input\" id=\"" + prefix + "_" + sec.options[i].name + "Check\" name=\"" + sec.options[i].name + "\"> \
+                <label for=\"" + prefix + "_" + sec.options[i].name + "Check\" class=\"custom-control-label text-secondary\">" + sec.options[i].text + "</label> \
               </li>";
       res += substr;
     }
@@ -78,22 +78,22 @@
 
   <ul class="list-divider-white">
     <li>
-      <%- genCheckBox(sections[0]) -%> 
+      <%- genCheckBox(sections[0], filterName) -%>
     </li>
     <li>
-      <%- genCheckBox(sections[1]) -%> 
+      <%- genCheckBox(sections[1], filterName) -%>
     </li>
     <li>
       <h6 class="card-title">Budget</h6>
-      
-      <div class="my-4" id="budgetRange"></div>
+
+      <div class="my-4 budgetRange" id="<%- filterName -%>Budget"></div>
 
       <ul class="price-tag w-100">
         <li>
           <p class="title">min price</p>
           <div class="d-flex price">
             <label for="minPrice">TWD </label>
-            <input type="text" readonly id="minPrice" name="minPrice">
+            <input type="text" readonly id="<%- filterName -%>MinPrice" class="minPrice" name="minPrice">
           </div>
         </li>
         <li class="divider">
@@ -103,34 +103,52 @@
           <p class="title">max price</p>
           <div class="d-flex price">
             <label for="maxPrice">TWD </label>
-            <input type="text" readonly id="maxPrice" name="maxPrice">
-          </div> 
+            <input type="text" readonly id="<%- filterName -%>MaxPrice" class="maxPrice" name="maxPrice">
+          </div>
         </li>
       </ul>
     </li>
     <li>
       <h6 class="card-title">Rating</h6>
-    <% for (var i=5; i>0; i--) { %> 
+    <% for (var i=5; i>0; i--) { %>
       <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="rate<%- i -%>Check" name="rate<%- i -%>">
-        <label for="rate<%- i -%>Check" class="custom-control-label">
+        <input type="checkbox" class="custom-control-input" id="<%- filterName -%>_rate<%- i -%>Check" name="rate<%- i -%>">
+        <label for="<%- filterName -%>_rate<%- i -%>Check" class="custom-control-label">
           <span class="material-icons">
           <% for (var j=0; j<i; j++) { %>
             grade
-          <% } %> 
+          <% } %>
           </span>
           <span class="text-secondary"><%- i -%>.0</span>
         </label>
       </div>
     <% } %>
       <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="unrateCheck" name="unrate">
-        <label for="unrateCheck" class="custom-control-label text-secondary">Unrated</label>
+        <input type="checkbox" class="custom-control-input" id="<%- filterName -%>_unrateCheck" name="unrate">
+        <label for="<%- filterName -%>_unrateCheck" class="custom-control-label text-secondary">Unrated</label>
       </div>
     </li>
     <li>
-      <%- genCheckBox(sections[2]) -%> 
+      <%- genCheckBox(sections[2], filterName) -%>
     </li>
   </ul>
 
 </form>
+
+<script>
+  // Jquery UI slider
+  $( function() {
+    $("#<%- filterName -%>Budget").slider({
+      range: true,
+      min: 0,
+      max: 4000,
+      values: [ 1000, 3000 ],
+      slide: function( event, ui ) {
+        $( "#<%- filterName -%>MinPrice" ).val( ui.values[0] );
+        $( "#<%- filterName -%>MaxPrice" ).val( ui.values[1]);
+      }
+    });
+    $( "#<%- filterName -%>MinPrice" ).val( $( "#<%- filterName -%>Budget" ).slider( "values", 0 ));
+    $( "#<%- filterName -%>MaxPrice" ).val( $( "#<%- filterName -%>Budget" ).slider( "values", 1 ));
+  } );
+</script>

@@ -115,22 +115,6 @@
     autoApply: true,
   });
 
-  // Jquery UI slider
-  $( function() {
-    $( "#budgetRange" ).slider({
-      range: true,
-      min: 0,
-      max: 4000,
-      values: [ 1000, 3000 ],
-      slide: function( event, ui ) {
-        $( "#minPrice" ).val( ui.values[0] );
-        $( "#maxPrice" ).val( ui.values[1]);
-      }
-    });
-    $( "#minPrice" ).val( $( "#budgetRange" ).slider( "values", 0 ));
-    $( "#maxPrice" ).val( $( "#budgetRange" ).slider( "values", 1 ));
-  } );
-
   // AOS
   AOS.init({
     delay: 0,
