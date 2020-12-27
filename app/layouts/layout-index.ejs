@@ -58,26 +58,26 @@
 
 <% if (current == 'index') { %>
   <%- include('components/banner-search') -%>
-  <%- include('index/top-choices') -%>
-  <%- include('index/popular-dest') -%>
+  <%- include('pages/index/top-choices') -%>
+  <%- include('pages/index/popular-dest') -%>
 <% } %>
 
 <% if (current == "search-result") { %>
-  <%- include('search-result/result') -%>
+  <%- include('pages/search-result/result') -%>
 <% } %>
 
 <% if (current == 'member') { %>
-  <%- include('member/member') -%>
+  <%- include('pages/member/member') -%>
 <% } %>
 
 <%- contents -%>
 
 <% if (current == 'detail') { %>
-  <%- include('detail/rooms') -%>
+  <%- include('pages/detail/rooms') -%>
 <% } %>
 
 <% if (current == 'booking') { %>
-  <%- include('reservation/booking') -%>
+  <%- include('pages/reservation/booking') -%>
 <% } %>
 
 <% if (current == 'index') { %>

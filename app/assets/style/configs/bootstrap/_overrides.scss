@@ -59,6 +59,14 @@
     }
 }
 
+.btn-lg {
+    font-size: $font-size-base;
+}
+
+.btn-primary, .btn-outline-primary {
+    font-weight: bold;
+}
+
 // ---- card
 .card {
     border: none;
