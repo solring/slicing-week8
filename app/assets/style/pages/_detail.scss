@@ -46,8 +46,12 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
-    .room-card-desc {
+.room-card-desc {
+    padding: 8px 16px;
+    @include media-breakpoint-down(md) {
+        padding: 8px 8px;
+    }
+    @include media-breakpoint-down(sm) {
         border-top: 1px solid $info;
         border-right: 1px solid $info;
         border-top-right-radius: 4px;
