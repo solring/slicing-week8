@@ -4,7 +4,7 @@
     vertical-align: top;
 }
 
-.notation-lg { 
+.notation-lg {
     font-size: 16px;
     vertical-align: top;
 }
@@ -13,7 +13,7 @@
     font-size: 18px;
 }
 
-.fz-title {
+h2.fz-title {
     font: normal normal 800 48px/64px Raleway;
 
     @include media-breakpoint-down(sm) {
