@@ -3,8 +3,8 @@
 
 
 ## 3-party library
-- Swiper js: for picture/card swiper.
-- Lightpicker: for customized date range picker.
+- [Swiper js](https://swiperjs.com/): for picture/card swiper.
+- [Litepicker](https://wakirin.github.io/Litepicker): for customized date range picker.
 - Jquery UI: for slider with 2 values.
 
 ## CSS framework
